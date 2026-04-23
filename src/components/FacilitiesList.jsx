@@ -414,6 +414,7 @@ export default function FacilitiesList({ heading = '' }) {
         </div>
       </section>
 
+      {!showEmptyState && (
       <section className="fl-container">
         {status === 'loading' && <div className="fl-status">Loading…</div>}
         {status === 'error' && <div className="fl-status">Failed to load facilities.</div>}
@@ -445,6 +446,7 @@ export default function FacilitiesList({ heading = '' }) {
           </>
         )}
       </section>
+      )}
     </div>
   );
 }
