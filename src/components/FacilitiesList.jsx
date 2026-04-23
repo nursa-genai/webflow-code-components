@@ -51,7 +51,10 @@ function readInitialParams() {
 function useClickOutside(ref, onOutside) {
   useEffect(() => {
     function handle(e) {
-      if (ref.current && !ref.current.contains(e.target)) onOutside();
+      if (!ref.current) return;
+      const path = typeof e.composedPath === 'function' ? e.composedPath() : [];
+      const inside = path.includes(ref.current) || ref.current.contains(e.target);
+      if (!inside) onOutside();
     }
     document.addEventListener('mousedown', handle);
     return () => document.removeEventListener('mousedown', handle);
