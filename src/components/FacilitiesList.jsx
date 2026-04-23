@@ -37,14 +37,20 @@ function formatCity(citySlug, stateCode) {
 
 function readInitialParams() {
   if (typeof window === 'undefined') {
-    return { states: new Set(), cities: new Set(), query: '', sort: 'az' };
+    return { states: new Set(), cities: new Set(), query: '', sort: 'az', visible: PAGE_SIZE };
   }
   const p = new URLSearchParams(window.location.search);
+  const shownRaw = parseInt(p.get('shown') || '', 10);
+  const visible =
+    Number.isFinite(shownRaw) && shownRaw >= PAGE_SIZE
+      ? Math.ceil(shownRaw / PAGE_SIZE) * PAGE_SIZE
+      : PAGE_SIZE;
   return {
     states: new Set((p.get('states') || '').split(',').filter(Boolean)),
     cities: new Set((p.get('cities') || '').split(',').filter(Boolean)),
     query: p.get('q') || '',
     sort: p.get('sort') === 'za' ? 'za' : 'az',
+    visible,
   };
 }
 
@@ -116,7 +122,7 @@ function Dropdown({ label, options, selected, onToggle, open, onOpen, onClose })
 
 export default function FacilitiesList({ heading = '' }) {
   const [facilities, setFacilities] = useState([]);
-  const [visible, setVisible] = useState(PAGE_SIZE);
+  const [visible, setVisible] = useState(() => readInitialParams().visible);
   const [status, setStatus] = useState('loading');
 
   const [selectedStates, setSelectedStates] = useState(() => readInitialParams().states);
@@ -138,10 +144,11 @@ export default function FacilitiesList({ heading = '' }) {
     if (selectedCities.size) p.set('cities', [...selectedCities].join(','));
     if (debouncedQuery.trim()) p.set('q', debouncedQuery.trim());
     if (sort && sort !== 'az') p.set('sort', sort);
+    if (visible > PAGE_SIZE) p.set('shown', String(visible));
     const qs = p.toString();
     const next = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
     window.history.replaceState(null, '', next);
-  }, [selectedStates, selectedCities, debouncedQuery, sort]);
+  }, [selectedStates, selectedCities, debouncedQuery, sort, visible]);
 
   const fullyLoadedRef = useRef(false);
 
@@ -193,9 +200,22 @@ export default function FacilitiesList({ heading = '' }) {
     };
   }, []);
 
+  const filtersKey = useMemo(
+    () =>
+      JSON.stringify({
+        states: [...selectedStates].sort(),
+        cities: [...selectedCities].sort(),
+        q: debouncedQuery.trim(),
+        sort,
+      }),
+    [selectedStates, selectedCities, debouncedQuery, sort]
+  );
+  const prevFiltersKeyRef = useRef(filtersKey);
   useEffect(() => {
+    if (prevFiltersKeyRef.current === filtersKey) return;
+    prevFiltersKeyRef.current = filtersKey;
     setVisible(PAGE_SIZE);
-  }, [selectedStates, selectedCities, debouncedQuery, sort]);
+  }, [filtersKey]);
 
   const filteredByStateAndCity = useMemo(() => {
     return facilities.filter((f) => {
@@ -283,6 +303,17 @@ export default function FacilitiesList({ heading = '' }) {
 
   const shown = filtered.slice(0, visible);
   const hasMore = visible < filtered.length;
+  const showEmptyState = status === 'ready' && shown.length === 0;
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const el = document.getElementById('empty-state');
+    if (!el) return;
+    el.classList.toggle('display-none', !showEmptyState);
+    return () => {
+      el.classList.add('display-none');
+    };
+  }, [showEmptyState]);
 
   return (
     <div className="fl-root">
@@ -401,9 +432,6 @@ export default function FacilitiesList({ heading = '' }) {
                   </p>
                 </a>
               ))}
-              {shown.length === 0 && (
-                <div className="fl-empty">No facilities match your filters.</div>
-              )}
             </div>
             {hasMore && (
               <button
@@ -411,7 +439,7 @@ export default function FacilitiesList({ heading = '' }) {
                 className="fl-load-more"
                 onClick={() => setVisible((v) => v + PAGE_SIZE)}
               >
-                Show more
+                Show more results
               </button>
             )}
           </>
