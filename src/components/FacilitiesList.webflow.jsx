@@ -12,7 +12,4 @@ export default declareComponent(FacilitiesList, {
         'Browse facilities to find shifts or claim and manage your facility profile',
     }),
   },
-  options: {
-    applyTagSelectors: true,
-  },
 });

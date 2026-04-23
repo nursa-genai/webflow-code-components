@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import './FacilitiesList.css';
 
 const PAGE_SIZE = 20;
 
@@ -69,57 +70,42 @@ function Dropdown({ label, options, selected, onToggle, open, onOpen, onClose })
   }, [options, innerQuery]);
 
   return (
-    <div className="custom-filter-dropdown" ref={ref}>
+    <div className={`fl-dropdown${open ? ' is-open' : ''}`} ref={ref}>
       <div
-        className="custom-filter-dropdown-toggle"
+        className="fl-dropdown__toggle"
         onClick={() => (open ? onClose() : onOpen())}
       >
-        <div className="text-color-purple">{label}</div>
-        <div className="arrow-purple w-icon-dropdown-toggle"></div>
+        <div className="fl-dropdown__toggle-label">{label}</div>
+        <div className="fl-dropdown__arrow"></div>
       </div>
-      <div className={`custom-filter-dropdown-list${open ? '' : ' hide-dropdown'}`}>
-        <div className="ais-RefinementList">
-          <div className="ais-RefinementList-searchBox">
-            <div className="ais-SearchBox">
-              <form
-                role="search"
-                className="ais-SearchBox-form"
-                noValidate
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <input
-                  className="ais-SearchBox-input"
-                  type="search"
-                  placeholder="Search..."
-                  value={innerQuery}
-                  onChange={(e) => setInnerQuery(e.target.value)}
-                  autoComplete="off"
-                  spellCheck="false"
-                />
-              </form>
-            </div>
-          </div>
-          <ul className="ais-RefinementList-list">
-            {filtered.map((o) => {
-              const checked = selected.has(o.value);
-              return (
-                <li
-                  key={o.value}
-                  className={`ais-RefinementList-item${checked ? ' ais-RefinementList-item--selected' : ''}`}
-                  onClick={() => onToggle(o.value)}
-                >
-                  <div>
-                    <div className="dropdown-item-parent">
-                      <div className={`algolia-checkbox${checked ? ' algolia-checkbox--checked' : ''}`}></div>
-                      <div>{o.label}</div>
-                      <div className="wf-refinmentlist-count">({o.count})</div>
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+      <div className={`fl-dropdown__panel${open ? '' : ' is-hidden'}`}>
+        <div className="fl-refinement__search">
+          <input
+            className="fl-input"
+            type="search"
+            placeholder="Search..."
+            value={innerQuery}
+            onChange={(e) => setInnerQuery(e.target.value)}
+            autoComplete="off"
+            spellCheck="false"
+          />
         </div>
+        <ul className="fl-refinement__list">
+          {filtered.map((o) => {
+            const checked = selected.has(o.value);
+            return (
+              <li
+                key={o.value}
+                className="fl-refinement__item"
+                onClick={() => onToggle(o.value)}
+              >
+                <div className={`fl-checkbox${checked ? ' is-checked' : ''}`}></div>
+                <div className="fl-refinement__label">{o.label}</div>
+                <div className="fl-refinement__count">({o.count})</div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
@@ -159,7 +145,16 @@ export default function FacilitiesList({ heading = '' }) {
   useEffect(() => {
     let cancelled = false;
     const unpack = ({ k, r }) =>
-      r.map((row) => Object.fromEntries(k.map((key, i) => [key, row[i]])));
+      r
+        .map((row) => Object.fromEntries(k.map((key, i) => [key, row[i]])))
+        .map((f) => {
+          if (!f.stateCode && typeof f.City === 'string') {
+            const tail = f.City.split('-').pop();
+            if (tail && tail.length === 2) f.stateCode = tail.toUpperCase();
+          }
+          return f;
+        })
+        .filter((f) => f.stateCode && US_STATES[f.stateCode]);
 
     const hasUrlFilters =
       selectedStates.size > 0 ||
@@ -287,18 +282,11 @@ export default function FacilitiesList({ heading = '' }) {
   const hasMore = visible < filtered.length;
 
   return (
-    <>
-      <link
-        rel="stylesheet"
-        href="https://cdn.prod.website-files.com/636e7f8063d6538dea5ca1e4/css/nursa.shared.dfaea54ed.min.css"
-        crossOrigin="anonymous"
-      />
-      <section className="section-filter-top relative algolia-hero-section">
-        <div className="container">
-          {heading && (
-            <h1 className="heading-style-h2 is-centred text-color-white">{heading}</h1>
-          )}
-          <div className="w-layout-grid filter-grid facilities">
+    <div className="fl-root">
+      <section className="fl-hero">
+        <div className="fl-hero__inner">
+          {heading && <h1 className="fl-heading">{heading}</h1>}
+          <div className="fl-dropdown-row">
             <Dropdown
               label="State"
               options={stateOptions}
@@ -318,153 +306,106 @@ export default function FacilitiesList({ heading = '' }) {
               onClose={() => setOpenDropdown((d) => (d === 'city' ? null : d))}
             />
           </div>
-          <div className="modul search algolia-modul gap-1-rem">
-            <div className="flex distribute-end-to-end">
-              <label className="text-span custom-text-span">Search for anything</label>
-              <a
-                href="#"
-                className="clear-refinements w-inline-block"
-                onClick={(e) => {
-                  e.preventDefault();
-                  clearAll();
-                }}
+          <div className="fl-search-row">
+            <div className="fl-search-row__header">
+              <label className="fl-search-row__label">Search for anything</label>
+              <button
+                type="button"
+                className="fl-clear-btn"
+                disabled={!hasRefinements}
+                onClick={clearAll}
               >
-                <div className="ais-ClearRefinements wf-clear-refinement-root">
-                  <button
-                    type="button"
-                    className={`ais-ClearRefinements-button wf-clear-refinement-button${
-                      hasRefinements ? '' : ' ais-ClearRefinements-button--disabled wf-clear-refinement-disabled'
-                    }`}
-                    disabled={!hasRefinements}
-                  >
-                    <span>{hasRefinements ? 'Clear Filters' : 'No Filters'}</span>
-                  </button>
-                </div>
-              </a>
+                {hasRefinements ? 'Clear Filters' : 'No Filters'}
+              </button>
             </div>
-            <div className="search-box">
-              <div className="ais-SearchBox">
-                <form
-                  role="search"
-                  className="ais-SearchBox-form"
-                  noValidate
-                  onSubmit={(e) => e.preventDefault()}
-                >
-                  <input
-                    className="ais-SearchBox-input"
-                    type="search"
-                    placeholder="Search for Facility, City, State..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    autoComplete="off"
-                    spellCheck="false"
-                    aria-label="Search"
-                  />
-                </form>
-              </div>
-            </div>
-            <div className="filter-header-flex algolia-tags no-margin">
-              <div className="algolia-filter-by">Filtering by:</div>
-              <div className="sortby-wrapper">
-                <div className="ais-SortBy MyCustomSortBy">
-                  <select
-                    className="ais-SortBy-select dropdown border"
-                    aria-label="Sort results by"
-                    value={sort}
-                    onChange={(e) => setSort(e.target.value)}
-                  >
-                    <option value="az">Alphabetical A-Z</option>
-                    <option value="za">Alphabetical Z-A</option>
-                  </select>
-                </div>
-              </div>
-              <div id="current-filters" className="tags">
-                <div
-                  className={`ais-CurrentRefinements${
-                    hasRefinements ? '' : ' ais-CurrentRefinements--noRefinement'
-                  }`}
-                >
-                  <ul className="ais-CurrentRefinements-list wf-current-refinement-list">
-                    {[...selectedStates].map((code) => (
-                      <li
-                        key={`state-${code}`}
-                        className="ais-CurrentRefinements-item wf-current-refinement-item"
+            <input
+              className="fl-input"
+              type="search"
+              placeholder="Search for Facility, City, State..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              autoComplete="off"
+              spellCheck="false"
+              aria-label="Search"
+            />
+            <div className="fl-filter-header">
+              <div className="fl-filter-header__label">Filtering by:</div>
+              <select
+                className="fl-sort-select"
+                aria-label="Sort results by"
+                value={sort}
+                onChange={(e) => setSort(e.target.value)}
+              >
+                <option value="az">Alphabetical A-Z</option>
+                <option value="za">Alphabetical Z-A</option>
+              </select>
+              <div className="fl-current-refinements">
+                <ul className="fl-tags">
+                  {[...selectedStates].map((code) => (
+                    <li key={`state-${code}`} className="fl-tag">
+                      <span className="fl-tag__label">State:</span>
+                      <span className="fl-tag__text">{US_STATES[code] || code}</span>
+                      <button
+                        type="button"
+                        className="fl-tag__delete"
+                        onClick={() => toggleSetValue(setSelectedStates)(code)}
+                        aria-label={`Remove ${US_STATES[code] || code} filter`}
                       >
-                        <span className="ais-CurrentRefinements-label wf-label">State: </span>
-                        <span className="ais-CurrentRefinements-category filter-tag">
-                          <span className="ais-CurrentRefinements-categoryLabel">
-                            {US_STATES[code] || code}
-                          </span>
-                          <button
-                            type="button"
-                            className="ais-CurrentRefinements-delete wf-current-refinement-delete"
-                            onClick={() => toggleSetValue(setSelectedStates)(code)}
-                            aria-label={`Remove ${US_STATES[code] || code} filter`}
-                          >
-                            ✕
-                          </button>
-                        </span>
-                      </li>
-                    ))}
-                    {[...selectedCities].map((slug) => {
-                      const code = slug.slice(-2).toUpperCase();
-                      const label = `${formatCity(slug, code)}, ${code}`;
-                      return (
-                        <li
-                          key={`city-${slug}`}
-                          className="ais-CurrentRefinements-item wf-current-refinement-item"
+                        ✕
+                      </button>
+                    </li>
+                  ))}
+                  {[...selectedCities].map((slug) => {
+                    const code = slug.slice(-2).toUpperCase();
+                    const label = `${formatCity(slug, code)}, ${code}`;
+                    return (
+                      <li key={`city-${slug}`} className="fl-tag">
+                        <span className="fl-tag__label">City:</span>
+                        <span className="fl-tag__text">{label}</span>
+                        <button
+                          type="button"
+                          className="fl-tag__delete"
+                          onClick={() => toggleSetValue(setSelectedCities)(slug)}
+                          aria-label={`Remove ${label} filter`}
                         >
-                          <span className="ais-CurrentRefinements-label wf-label">City: </span>
-                          <span className="ais-CurrentRefinements-category filter-tag">
-                            <span className="ais-CurrentRefinements-categoryLabel">{label}</span>
-                            <button
-                              type="button"
-                              className="ais-CurrentRefinements-delete wf-current-refinement-delete"
-                              onClick={() => toggleSetValue(setSelectedCities)(slug)}
-                              aria-label={`Remove ${label} filter`}
-                            >
-                              ✕
-                            </button>
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
+                          ✕
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section className='fn-section larger-top-padding'>
-      <div className="fn-container-2">
-        {status === 'loading' && <div>Loading…</div>}
-        {status === 'error' && <div>Failed to load facilities.</div>}
+
+      <section className="fl-container">
+        {status === 'loading' && <div className="fl-status">Loading…</div>}
+        {status === 'error' && <div className="fl-status">Failed to load facilities.</div>}
         {status === 'ready' && (
           <>
-            <div className="facilities-list">
+            <div className="fl-grid">
               {shown.map((f) => (
-                <div key={f.Slug} className="facilities-item w-dyn-item">
-                  <a
-                    className="facility-link w-inline-block"
-                    href={`/facilities/${f.Slug}`}
-                  >
-                    <h4 className="fn-h4-style text-purple margin-bot-xxs">{f.Name}</h4>
-                    <p className="facility-info-wrapper no-gutter">
-                      {formatCity(f.City, f.stateCode)}, {f.stateCode}
-                    </p>
-                  </a>
-                </div>
+                <a
+                  key={f.Slug}
+                  className="fl-card"
+                  href={`/facilities/${f.Slug}`}
+                >
+                  <h4 className="fl-card__name">{f.Name}</h4>
+                  <p className="fl-card__location">
+                    {formatCity(f.City, f.stateCode)}, {f.stateCode}
+                  </p>
+                </a>
               ))}
               {shown.length === 0 && (
-                <div className="facilities-list__empty">No facilities match your filters.</div>
+                <div className="fl-empty">No facilities match your filters.</div>
               )}
             </div>
             {hasMore && (
               <button
                 type="button"
-                className="facilities-search-load-more-button w-button"
+                className="fl-load-more"
                 onClick={() => setVisible((v) => v + PAGE_SIZE)}
               >
                 Show more
@@ -472,9 +413,7 @@ export default function FacilitiesList({ heading = '' }) {
             )}
           </>
         )}
-      </div>
       </section>
-
-    </>
+    </div>
   );
 }
