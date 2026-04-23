@@ -2,6 +2,11 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 const PAGE_SIZE = 20;
 
+const FACILITIES_FULL_URL =
+  'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/facilities.min.json';
+const FACILITIES_FIRST_URL =
+  'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/facilities.first.min.json';
+
 const US_STATES = {
   AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California',
   CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', DC: 'District of Columbia',
@@ -161,7 +166,7 @@ export default function FacilitiesList({ heading = '' }) {
       selectedCities.size > 0 ||
       debouncedQuery.trim().length > 0;
 
-    const fullPromise = fetch('/facilities.min.json')
+    const fullPromise = fetch(FACILITIES_FULL_URL)
       .then((r) => r.json())
       .then((data) => {
         if (cancelled) return;
@@ -171,7 +176,7 @@ export default function FacilitiesList({ heading = '' }) {
       });
 
     if (!hasUrlFilters) {
-      fetch('/facilities.first.min.json')
+      fetch(FACILITIES_FIRST_URL)
         .then((r) => r.json())
         .then((data) => {
           if (cancelled || fullyLoadedRef.current) return;
@@ -283,6 +288,11 @@ export default function FacilitiesList({ heading = '' }) {
 
   return (
     <>
+      <link
+        rel="stylesheet"
+        href="https://cdn.prod.website-files.com/636e7f8063d6538dea5ca1e4/css/nursa.shared.dfaea54ed.min.css"
+        crossOrigin="anonymous"
+      />
       <section className="section-filter-top relative algolia-hero-section">
         <div className="container">
           {heading && (

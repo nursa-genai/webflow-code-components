@@ -3,7 +3,9 @@
     "name": "Facilities Search form",
     "components": [
       "./src/**/*.webflow.@(js|jsx|mjs|ts|tsx)"
-    ]
+    ],
+    "description": "\"User for Facilities search\"",
+    "id": "facilities-search-form"
   },
   "devlink": {
     "rootDir": "./devlink"
