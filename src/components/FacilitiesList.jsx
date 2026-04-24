@@ -37,7 +37,7 @@ function formatCity(citySlug, stateCode) {
 
 function readInitialParams() {
   if (typeof window === 'undefined') {
-    return { states: new Set(), cities: new Set(), query: '', sort: 'az', visible: PAGE_SIZE };
+    return { states: new Set(), cities: new Set(), query: '', sort: '', visible: PAGE_SIZE };
   }
   const p = new URLSearchParams(window.location.search);
   const shownRaw = parseInt(p.get('shown') || '', 10);
@@ -49,7 +49,7 @@ function readInitialParams() {
     states: new Set((p.get('states') || '').split(',').filter(Boolean)),
     cities: new Set((p.get('cities') || '').split(',').filter(Boolean)),
     query: p.get('q') || '',
-    sort: p.get('sort') === 'za' ? 'za' : 'az',
+    sort: p.get('sort') === 'az' ? 'az' : p.get('sort') === 'za' ? 'za' : '',
     visible,
   };
 }
@@ -143,7 +143,7 @@ export default function FacilitiesList({ heading = '' }) {
     if (selectedStates.size) p.set('states', [...selectedStates].join(','));
     if (selectedCities.size) p.set('cities', [...selectedCities].join(','));
     if (debouncedQuery.trim()) p.set('q', debouncedQuery.trim());
-    if (sort && sort !== 'az') p.set('sort', sort);
+    if (sort === 'az' || sort === 'za') p.set('sort', sort);
     if (visible > PAGE_SIZE) p.set('shown', String(visible));
     const qs = p.toString();
     const next = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
