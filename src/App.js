@@ -1,10 +1,10 @@
 import './App.css';
-import FacilitiesList from './components/FacilitiesList';
+import ShiftBlocks from './components/ShiftBlocks';
 
 function App() {
   return (
     <div className="App">
-      <FacilitiesList heading="Browse facilities to find shifts or claim and manage your facility profile" />
+      <ShiftBlocks page={0} limit={20} columns="3" cardLayout="specialtyCredentials" />
     </div>
   );
 }
