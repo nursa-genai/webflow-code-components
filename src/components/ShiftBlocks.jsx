@@ -64,13 +64,15 @@ function buildShiftSlug(block) {
   const stateSlug = STATE_SLUG_BY_ABBR[stateAbbr] || slugify(stateAbbr);
   const specialtySlug = specialties.length ? slugify(specialties.join(' ')) : '';
 
+  const shiftIdSegment = shiftId ? `si-${String(shiftId).toLowerCase()}` : '';
+
   return [
     slugify(license),
     specialtySlug,
     slugify(city),
     stateSlug,
     slugify(facilityName),
-    String(shiftId).toLowerCase(),
+    shiftIdSegment,
   ]
     .filter(Boolean)
     .join('-');
@@ -151,7 +153,7 @@ function buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, 
 }
 
 function ShiftCard({ block, layout }) {
-  const href = `/shifts/${buildShiftSlug(block)}`;
+  const href = `/jobs/shifts/${buildShiftSlug(block)}`;
   const facility = block.facility || {};
   const location = block.location || {};
   const details = block.shiftDetails || {};
