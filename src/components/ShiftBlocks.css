@@ -1,10 +1,11 @@
 .sb-root {
   --sb-primary: var(--primary--900, #5924b0);
   --sb-primary-soft: var(--primary--500, #e7d8ff);
+  --sb-hover: var(--secondary-300, #effaff);
   --sb-surface: var(--grey--0, #fff);
   --sb-surface-muted: var(--bg-grey, #f7f7fc);
-  --sb-text: var(--grey--900, #0e0320);
-  --sb-text-muted: var(--grey--700, #585165);
+  --sb-text: #0e0320 !important;
+  --sb-text-muted: #7d7787 !important;
   --sb-text-subtle: var(--grey--500, #a29ea9);
   --sb-border: var(--grey--300, #e7e6e9);
   --sb-radius: var(--_apps---sizes--radius, 10px);
@@ -60,8 +61,8 @@
   background: var(--sb-surface);
   border: 1px solid var(--sb-border);
   border-radius: var(--sb-radius);
-  box-shadow: var(--sb-shadow);
   overflow: hidden;
+  box-shadow: rgba(14, 3, 32, 0.03) 0px 6px 12px;
   text-decoration: none;
   color: inherit;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
@@ -70,7 +71,7 @@
 .sb-card:hover {
   transform: translateY(-2px);
   border-color: var(--sb-primary-soft);
-  box-shadow: 0 4px 12px rgba(15, 14, 32, 0.08), 0 12px 28px rgba(15, 14, 32, 0.06);
+  text-decoration: none;
 }
 
 .sb-card__image {
@@ -208,15 +209,19 @@
   gap: 0;
 }
 
+.sb-card--stateCitiesWrapper {
+  padding: .375rem 0;
+  border-bottom: 1px solid var(--sb-border);
+}
+
 .sb-card--stateCities {
   display: grid;
-  grid-template-columns: minmax(220px, 1.2fr) minmax(140px, 0.9fr) minmax(220px, 1.4fr) minmax(140px, 0.7fr);
+  grid-template-columns: 3.5fr 2fr 2.5fr 1.25fr;
   align-items: start;
-  gap: 24px;
-  padding: 28px 8px;
+  gap: 1rem;
+  padding: 1.5rem;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid var(--sb-border);
   border-radius: 0;
   box-shadow: none;
 }
@@ -226,72 +231,70 @@
   box-shadow: none;
   border-color: transparent;
   border-bottom-color: var(--sb-primary-soft);
+  text-decoration: none;
+  background: var(--sb-hover);
 }
 
 .sb-state__title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--sb-primary);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .sb-state__date {
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--sb-text);
 }
 
 .sb-state__time {
-  margin-top: 4px;
-  font-size: 14px;
+  margin-top: .25rem;
+  font-size: .875rem;
   color: var(--sb-text-muted);
 }
 
 .sb-state__facility {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 1rem;
   color: var(--sb-text);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .sb-state__citystate {
-  margin-top: 4px;
-  font-size: 14px;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
   color: var(--sb-text-muted);
 }
 
 .sb-state__pay {
-  text-align: right;
+  /* text-align: right; */
+}
+
+.sb-state__rate {
+  display: flex;
+  align-items: center;
 }
 
 .sb-state__rate-amount {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--sb-text);
+  color: var(--sb-primary);
 }
 
 .sb-state__rate-unit {
-  font-size: 14px;
-  color: var(--sb-text-muted);
+  font-size: 0.75rem;
+  color: var(--sb-primary);
 }
 
 .sb-state__total {
-  margin-top: 4px;
-  font-size: 14px;
-  color: var(--sb-text-muted);
+  margin-top: .25rem;
+  font-size: .85rem;
+  color: var(--sb-primary);
 }
 
 .sb-state__total-label {
+  font-size: .75rem;
   color: var(--sb-text-muted);
-}
-
-@media (max-width: 768px) {
-  .sb-card--stateCities {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 12px;
-  }
-  .sb-state__title { grid-column: 1 / -1; }
-  .sb-state__pay { text-align: right; }
 }
 
 .sb-card--facility,
@@ -299,22 +302,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
+  padding: 1.25rem;
+  gap: 1.25rem;
   background: var(--sb-surface);
-  border: 1px solid var(--sb-border);
+  border: 1px solid transparent;
   border-radius: var(--sb-radius);
-  box-shadow: var(--sb-shadow);
-}
-
-.sb-spc__where {
-  margin-top: 20px;
 }
 
 .sb-spc__facility {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1rem;
   color: var(--sb-text);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .sb-spc__county {
@@ -325,16 +323,14 @@
 
 .sb-card--facility:hover,
 .sb-card--specCreds:hover {
-  transform: translateY(-2px);
-  border-color: var(--sb-primary-soft);
-  box-shadow: 0 4px 12px rgba(15, 14, 32, 0.08), 0 12px 28px rgba(15, 14, 32, 0.06);
+  border-color: #79cff0;
 }
 
 .sb-fac__title {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--sb-primary);
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .sb-fac__title > div + div {
@@ -342,7 +338,6 @@
 }
 
 .sb-fac__divider {
-  margin: 20px 0;
   height: 1px;
   background: var(--sb-border);
 }
@@ -355,50 +350,47 @@
 }
 
 .sb-fac__date {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--sb-text);
 }
 
 .sb-fac__time {
-  margin-top: 4px;
-  font-size: 14px;
+  margin-top: .25rem;
+  font-size: .875rem;
   color: var(--sb-text-muted);
 }
 
 .sb-fac__rates {
   text-align: right;
-}
-
-.sb-fac__rate-amount {
-  font-size: 24px;
-  font-weight: 700;
   color: var(--sb-primary);
 }
 
+.sb-fac__rate-amount {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .sb-fac__rate-unit {
-  font-size: 14px;
-  color: var(--sb-text-muted);
-  margin-left: 2px;
+  font-size: .75rem;
+  color: var(--sb-primary);
 }
 
 .sb-fac__total {
-  margin-top: 4px;
+  margin-top: .25rem;
+  color: var(--sb-primary);
 }
 
 .sb-fac__total-amount {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: .875;
   color: var(--sb-primary);
 }
 
 .sb-fac__total-unit {
-  font-size: 14px;
-  color: var(--sb-text-muted);
+  font-size: .75rem;
 }
 
 .sb-fac__actions {
-  margin-top: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -409,28 +401,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 56px;
-  height: 36px;
-  padding: 0 18px;
-  border: 1px solid var(--sb-primary);
+  padding: 0.125rem 0.875rem;
+  border: 1px solid #1d8292;
   border-radius: 999px;
-  color: var(--sb-primary);
+  color: #1d8292;
   background: var(--sb-surface);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 2;
 }
 
 .sb-fac__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  padding: 0 28px;
+  padding: 1rem 1.5rem;
   background: var(--sb-primary);
   color: #fff;
   border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   transition: opacity 0.15s ease;
 }
 
@@ -441,13 +430,14 @@
 .sb-loadmore-wrap {
   display: flex;
   justify-content: center;
-  padding: 24px 0 8px;
+  padding: 10px 0;
+  align-items: center;
 }
 
 .sb-loadmore {
   font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--sb-primary);
   background: var(--sb-surface);
   border: 1px solid var(--sb-primary);
@@ -457,14 +447,20 @@
   transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
 }
 
-.sb-loadmore:hover:not(:disabled) {
-  background: var(--sb-primary);
-  color: #fff;
+.sb-loadmore--specialtyCredentials,
+.sb-loadmore--stateCities {
+  min-width: 200px;
+  height: 50px;
+  background: var(--sb-hover);
+  border: var(--sb-border);
 }
 
-.sb-loadmore:disabled {
-  opacity: 0.6;
-  cursor: default;
+.sb-loadmore--specialtyCredentials,
+.sb-loadmore--stateCities:hover {
+    outline-color: #dff4fd;
+    outline-width: 1px;
+    outline-style: solid;
+    text-decoration: none;
 }
 
 .sb-card--compact {
@@ -495,4 +491,41 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
+}
+
+
+@media (max-width: 991px) {
+  .sb-card--stateCities {
+    grid-template-columns: 3.5fr 2fr;
+    padding: .5rem 0;
+    align-items: center;
+  }
+
+  .sb-card--stateCities:hover {
+    background: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .sb-card--stateCities {
+    padding: 1.25rem 0 !important;
+    gap: 0.5rem;
+  }
+
+  .sb-state__title,
+  .sb-state__where {
+    grid-column: 1/3;
+  }
+
+  .sb-state__where {
+    order: 1;
+  }
+
+  .sb-state__when {
+    order: 2;
+  }
+
+  .sb-state__pay {
+    order: 2;
+  }
 }

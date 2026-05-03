@@ -124,6 +124,14 @@ function formatPayRange(rate) {
   return `$${rate.min}–$${rate.max}/hr`;
 }
 
+const LOAD_MORE_LABEL = {
+  default: 'Load more',
+  compact: 'Load more',
+  facility: 'Load more shifts',
+  specialtyCredentials: 'Load jobs with this credential',
+  stateCities: 'Load more cities',
+};
+
 function buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city }) {
   const params = new URLSearchParams();
   params.set('page', String(page ?? 0));
@@ -285,32 +293,34 @@ function ShiftCard({ block, layout }) {
     const title = hourlyRate ? `${titleParts} – ${hourlyRate} per hour` : titleParts;
 
     return (
-      <a className="sb-card sb-card--stateCities" href={href}>
-        <div className="sb-state__title">{title}</div>
-        <div className="sb-state__when">
-          <div className="sb-state__date">{longDate}</div>
-          {details.shiftTimes && (
-            <div className="sb-state__time">{details.shiftTimes}</div>
-          )}
-        </div>
-        <div className="sb-state__where">
-          <div className="sb-state__facility">{facilityLine}</div>
-          {cityStateLong && (
-            <div className="sb-state__citystate">{cityStateLong}</div>
-          )}
-        </div>
-        <div className="sb-state__pay">
-          {hourlyRate && (
-            <div className="sb-state__rate">
-              <span className="sb-state__rate-amount">{hourlyRate}</span>
-              <span className="sb-state__rate-unit">/hour</span>
-            </div>
-          )}
-          {estTotal && (
-            <div className="sb-state__total">{estTotal}<span className="sb-state__total-label"> est. total</span></div>
-          )}
-        </div>
-      </a>
+      <div className='sb-card-wrapper sb-card--stateCitiesWrapper'>
+        <a className="sb-card sb-card--stateCities" href={href}>
+          <div className="sb-state__title">{title}</div>
+          <div className="sb-state__when">
+            <div className="sb-state__date">{longDate}</div>
+            {details.shiftTimes && (
+              <div className="sb-state__time">{details.shiftTimes}</div>
+            )}
+          </div>
+          <div className="sb-state__where">
+            <div className="sb-state__facility">{facilityLine}</div>
+            {cityStateLong && (
+              <div className="sb-state__citystate">{cityStateLong}</div>
+            )}
+          </div>
+          <div className="sb-state__pay">
+            {hourlyRate && (
+              <div className="sb-state__rate">
+                <span className="sb-state__rate-amount">{hourlyRate}</span>
+                <span className="sb-state__rate-unit">/hour</span>
+              </div>
+            )}
+            {estTotal && (
+              <div className="sb-state__total">{estTotal}<span className="sb-state__total-label"> est. total</span></div>
+            )}
+          </div>
+        </a>
+      </div>
     );
   }
 
@@ -502,11 +512,13 @@ export default function ShiftBlocks({
             <div className="sb-loadmore-wrap">
               <button
                 type="button"
-                className="sb-loadmore"
+                className={`sb-loadmore sb-loadmore--${cardLayout}`}
                 onClick={loadMore}
                 disabled={status === 'loading-more'}
               >
-                {status === 'loading-more' ? 'Loading…' : 'Load more'}
+                {status === 'loading-more'
+                  ? 'Loading…'
+                  : LOAD_MORE_LABEL[cardLayout] || LOAD_MORE_LABEL.default}
               </button>
             </div>
           )}
