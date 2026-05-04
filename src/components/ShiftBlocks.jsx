@@ -185,7 +185,7 @@ function ShiftCard({ block, layout }) {
       : '';
 
     return (
-      <a className="sb-card sb-card--specCreds" href={href}>
+      <a className="button-job sb-card sb-card--specCreds" href={href}>
         <div className="sb-fac__title">
           {titleLine1 && <span>{titleLine1}</span>}
           {titleLine2 && <span> {titleLine2}</span>}
@@ -244,7 +244,7 @@ function ShiftCard({ block, layout }) {
     const titleLine2 = hourlyRateExact ? `${hourlyRateExact} per hour` : '';
 
     return (
-      <a className="sb-card sb-card--facility" href={href}>
+      <a className="button-job sb-card sb-card--facility" href={href}>
         <div className="sb-fac__title">
           {titleLine1 && <span>{titleLine1}</span>}
           {titleLine2 && <span> {titleLine2}</span>}
@@ -296,7 +296,7 @@ function ShiftCard({ block, layout }) {
 
     return (
       <div className='sb-card-wrapper sb-card--stateCitiesWrapper'>
-        <a className="sb-card sb-card--stateCities" href={href}>
+        <a className="button-job sb-card sb-card--stateCities" href={href}>
           <div className="sb-state__title">{title}</div>
           <div className="sb-state__when">
             <div className="sb-state__date">{longDate}</div>
@@ -328,7 +328,7 @@ function ShiftCard({ block, layout }) {
 
   if (layout === 'compact') {
     return (
-      <a className="sb-card sb-card--compact" href={href}>
+      <a className="button-job sb-card sb-card--compact" href={href}>
         <div className="sb-card__compact-main">
           <h4 className="sb-card__name">{facility.name}</h4>
           <p className="sb-card__location">{locationLabel}</p>
@@ -348,7 +348,7 @@ function ShiftCard({ block, layout }) {
   }
 
   return (
-    <a className="sb-card" href={href}>
+    <a className="button-job sb-card" href={href}>
       {facility.image && (
         <div className="sb-card__image">
           <img src={facility.image} alt={facility.name || ''} loading="lazy" />
