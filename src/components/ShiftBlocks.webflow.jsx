@@ -41,8 +41,12 @@ export default declareComponent(ShiftBlocks, {
     }),
     cardLayout: props.Variant({
       name: 'Card Layout',
-      defaultValue: 'default',
-      options: ['default', 'compact', 'stateCities', 'facility', 'specialtyCredentials'],
+      defaultValue: 'facility',
+      options: ['stateCities', 'facility', 'specialtyCredentials'],
+    }),
+    loadMoreLabel: props.Text({
+      name: 'Load More Button Text',
+      defaultValue: '',
     }),
   },
 });

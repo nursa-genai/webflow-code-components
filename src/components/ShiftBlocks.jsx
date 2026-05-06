@@ -398,6 +398,7 @@ export default function ShiftBlocks({
   city = '',
   columns = '3',
   cardLayout = 'default',
+  loadMoreLabel = '',
 }) {
   const [blocks, setBlocks] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -488,6 +489,13 @@ export default function ShiftBlocks({
       });
   };
 
+  useEffect(() => {
+    if (status === 'ready' && blocks.length === 0) {
+      const el = document.querySelector('[data-notifyme-wrapper]');
+      if (el) el.classList.remove('display-none');
+    }
+  }, [status, blocks.length]);
+
   const colCount = Math.max(1, Math.min(4, parseInt(columns, 10) || 3));
 
   return (
@@ -520,7 +528,7 @@ export default function ShiftBlocks({
               >
                 {status === 'loading-more'
                   ? 'Loading…'
-                  : LOAD_MORE_LABEL[cardLayout] || LOAD_MORE_LABEL.default}
+                  : loadMoreLabel || LOAD_MORE_LABEL[cardLayout] || LOAD_MORE_LABEL.default}
               </button>
             </div>
           )}
