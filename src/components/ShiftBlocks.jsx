@@ -170,7 +170,7 @@ function ShiftCard({ block, layout }) {
     const hourlyRateExact = formatHourlyRate(block.hourlyPayRate);
     const hourlyRateRounded = formatHourlyRateRounded(block.hourlyPayRate);
     const estTotalRounded = formatEstimatedTotalRounded(block.estimatedTotal);
-    const longDate = formatLongDate(details.dateRange && details.dateRange.start);
+    const longDate = formatLongDate(details.fromDateISO);
     const titleLeft = [licenseFull, license].filter(Boolean).join(' ');
     const titleLine1 = firstSpecialty ? `${titleLeft} – ${firstSpecialty}` : titleLeft;
     const titleLine2 = hourlyRateExact ? `${hourlyRateExact} per hour` : '';
@@ -238,7 +238,7 @@ function ShiftCard({ block, layout }) {
     const hourlyRateExact = formatHourlyRate(block.hourlyPayRate);
     const hourlyRateRounded = formatHourlyRateRounded(block.hourlyPayRate);
     const estTotalRounded = formatEstimatedTotalRounded(block.estimatedTotal);
-    const longDate = formatLongDate(details.dateRange && details.dateRange.start);
+    const longDate = formatLongDate(details.fromDateISO);
     const titleLeft = [licenseFull, license].filter(Boolean).join(' ');
     const titleLine1 = firstSpecialty ? `${titleLeft} – ${firstSpecialty}` : titleLeft;
     const titleLine2 = hourlyRateExact ? `${hourlyRateExact} per hour` : '';
@@ -284,7 +284,7 @@ function ShiftCard({ block, layout }) {
     const license = block.requiredLicense || '';
     const licenseFull = LICENSE_FULL_NAME[license] || '';
     const hourlyRate = formatHourlyRate(block.hourlyPayRate);
-    const longDate = formatLongDate(details.dateRange && details.dateRange.start);
+    const longDate = formatLongDate(details.fromDateISO);
     const stateFull = STATE_FULL_BY_ABBR[location.state] || location.state || '';
     const facilityLine = [facility.name, [location.city, location.state].filter(Boolean).join(', ')]
       .filter(Boolean)
