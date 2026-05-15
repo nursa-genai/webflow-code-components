@@ -52,6 +52,34 @@ export default declareComponent(SearchJobs, {
         'Comma-separated URLs for fallback popular locations, e.g. /rn/salt-lake-city, /cna/denver',
       group: 'Data Sources',
     }),
+    defaultState: props.Text({
+      name: 'Default State',
+      defaultValue: '',
+      tooltip:
+        'Pre-fill the search with a state name or abbreviation, e.g. "Utah" or "UT". Overridden by Default City or Default Zip if those are set too.',
+      group: 'Defaults',
+    }),
+    defaultCity: props.Text({
+      name: 'Default City',
+      defaultValue: '',
+      tooltip:
+        'Pre-fill the search with a city name, e.g. "Salt Lake City". Overrides Default State; overridden by Default Zip.',
+      group: 'Defaults',
+    }),
+    defaultZip: props.Text({
+      name: 'Default Zip',
+      defaultValue: '',
+      tooltip:
+        'Pre-fill the search with a 5-digit US zip code. Triggers the zip lookup on mount. Highest priority — overrides Default City and Default State.',
+      group: 'Defaults',
+    }),
+    defaultLicense: props.Text({
+      name: 'Default License',
+      defaultValue: '',
+      tooltip:
+        'Pre-select the license dropdown, e.g. "RN", "CNA", "RN ICU", or a slug like "rn-med-surg". Leave empty for "All Licenses".',
+      group: 'Defaults',
+    }),
     dataUrl: props.Text({
       name: 'Data URL (full)',
       defaultValue:

@@ -208,6 +208,27 @@ function unpackMin(data) {
   });
 }
 
+// Resolve a license input (display name like "RN ICU", config key like
+// "rn-icu", or empty) to the canonical display value the filter state expects.
+// Returns 'All' for empty / unknown inputs.
+function resolveLicense(input) {
+  if (!input) return 'All';
+  const lower = String(input).toLowerCase().trim();
+  if (LICENSE_CONFIG[lower]) return LICENSE_CONFIG[lower].display;
+  for (const key of Object.keys(LICENSE_CONFIG)) {
+    if (LICENSE_CONFIG[key].display.toLowerCase() === lower) {
+      return LICENSE_CONFIG[key].display;
+    }
+  }
+  return 'All';
+}
+
+function hasCookieConsent() {
+  if (typeof document === 'undefined') return false;
+  const match = document.cookie.match(/(?:^|;\s*)cookie-consent=([^;]+)/);
+  return match ? match[1].toLowerCase() === 'true' : false;
+}
+
 function isZipCode(q) {
   return /^\d{5}$/.test(q.trim());
 }
@@ -278,27 +299,38 @@ export default function SearchJobs({
   showSuggestions = true,
   dataUrl = SEARCHJOBS_URL,
   dataFirstUrl = SEARCHJOBS_FIRST_URL,
+  defaultState = '',
+  defaultCity = '',
+  defaultZip = '',
+  defaultLicense = '',
 }) {
   const isDark = variant === 'Dark';
-  const [query, setQuery] = useState('');
-  const [filter, setFilter] = useState('All');
+  // Pre-fill priority: zip beats city beats state. License is a separate
+  // dropdown so it's set independently. These initial values only apply on
+  // mount — the user can still edit the search box / dropdown afterward.
+  const [query, setQuery] = useState(
+    () => String(defaultZip || defaultCity || defaultState || '').trim(),
+  );
+  const [filter, setFilter] = useState(() => resolveLicense(defaultLicense));
   const [csvData, setCsvData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [suggestedItems, setSuggestedItems] = useState([]);
-  const [geoLabel, setGeoLabel] = useState('');
+  const [geoLabel, setGeoLabel] = useState('Popular locations');
   const [sortMode, setSortMode] = useState('default');
   const [zipResults, setZipResults] = useState([]);
   const [zipLoading, setZipLoading] = useState(false);
-  const [zipTotalCount, setZipTotalCount] = useState(0);
   const [rateLimited, setRateLimited] = useState(false);
   const [fullyLoaded, setFullyLoaded] = useState(false);
 
   const debounceRef = useRef(null);
   const dropdownRef = useRef(null);
-  const geoAttempted = useRef(false);
-  const userGeoCity = useRef('');
-  const userGeoState = useRef('');
+  // Geolocation is opt-in. The user must click the "Nearby" sort button to
+  // trigger the browser permission prompt and the reverse-geocode lookup;
+  // nothing fires on mount. States: 'idle' | 'requesting' | 'granted' | 'denied'.
+  const [geoStatus, setGeoStatus] = useState('idle');
+  const [userGeoCity, setUserGeoCity] = useState('');
+  const [userGeoState, setUserGeoState] = useState('');
   const zipCache = useRef({});
   const zipAbortRef = useRef(null);
   const rateLimiter = useRef(createRateLimiter(30, 60000));
@@ -345,80 +377,58 @@ export default function SearchJobs({
     };
   }, [dataUrl, dataFirstUrl]);
 
-  // Fast first-paint suggestions: as soon as ANY data is loaded (the first-N
-  // file usually wins), show popular/random cards so the user sees something
-  // immediately. Geo matching happens later, against the full dataset.
-  const fastSuggestionsRef = useRef(false);
+  // Curated suggestions: only populated if the host passed `popularLocations`
+  // with URLs that match items in the dataset. When set, the suggestions grid
+  // shows exactly these items (and Load More is meaningless because it's a
+  // hand-picked list). When empty, filteredPool falls back to the full csvData
+  // so Load More can page through the whole dataset.
+  const curatedDoneRef = useRef(false);
   useEffect(() => {
-    if (!showSuggestions || csvData.length === 0 || fastSuggestionsRef.current) return;
-    fastSuggestionsRef.current = true;
+    if (!showSuggestions || csvData.length === 0 || curatedDoneRef.current) return;
+    if (!popularLocations || !popularLocations.trim()) return;
+    curatedDoneRef.current = true;
 
-    function getRandomItems(data, count) {
-      const shuffled = [...data].sort(() => Math.random() - 0.5);
-      const seen = new Set();
-      const result = [];
-      for (const item of shuffled) {
-        if (!seen.has(item.name) && result.length < count) {
-          seen.add(item.name);
-          result.push(item);
-        }
-      }
-      return result;
-    }
-
-    if (popularLocations && popularLocations.trim()) {
-      const urls = popularLocations
-        .split(',')
-        .map((u) => u.trim())
-        .filter(Boolean);
-      const matched = [];
-      for (const url of urls) {
-        const normalizedUrl = url.replace(/\/+$/, '');
-        const found = csvData.find((d) => {
-          const itemUrl = `${d.urlPrefix}${d.slug}`.replace(/\/+$/, '');
-          return itemUrl === normalizedUrl;
-        });
-        if (found && !matched.some((m) => m.name === found.name && m.license === found.license)) {
-          matched.push(found);
-        }
-      }
-      if (matched.length > 0) {
-        setSuggestedItems(matched);
-        setGeoLabel('Popular locations');
-        return;
+    const urls = popularLocations
+      .split(',')
+      .map((u) => u.trim())
+      .filter(Boolean);
+    const matched = [];
+    for (const url of urls) {
+      const normalizedUrl = url.replace(/\/+$/, '');
+      const found = csvData.find((d) => {
+        const itemUrl = `${d.urlPrefix}${d.slug}`.replace(/\/+$/, '');
+        return itemUrl === normalizedUrl;
+      });
+      if (found && !matched.some((m) => m.name === found.name && m.license === found.license)) {
+        matched.push(found);
       }
     }
-    setSuggestedItems(getRandomItems(csvData, 12));
-    setGeoLabel('Popular locations');
+    if (matched.length > 0) {
+      setSuggestedItems(matched);
+      setGeoLabel('Popular locations');
+    }
   }, [csvData, showSuggestions, popularLocations]);
 
-  // Geolocation-based suggestions: only run once the FULL dataset has loaded,
-  // otherwise the user would get geo-matched suggestions from the tiny first-N
-  // sample that never refresh when the real data arrives.
-  useEffect(() => {
-    if (!showSuggestions || !fullyLoaded || geoAttempted.current) return;
-    geoAttempted.current = true;
-
-    function matchByCity(cityName, stateName, data, count) {
-      const city = cityName.toLowerCase();
-      const state = stateName.toLowerCase();
-      let matches = data.filter((d) => d.name.toLowerCase().includes(city));
-      if (matches.length === 0 && state) {
-        matches = data.filter((d) => d.name.toLowerCase().includes(state));
-      }
-      const seen = new Set();
-      const result = [];
-      for (const item of matches) {
-        if (!seen.has(item.name) && result.length < count) {
-          seen.add(item.name);
-          result.push(item);
-        }
-      }
-      return result;
+  // Opt-in geolocation: requests browser permission and reverse-geocodes via
+  // Nominatim. Triggered by the user clicking the "Nearby" sort button.
+  // Gated on the site's cookie-consent cookie — we do not prompt for browser
+  // location until the user has accepted cookies.
+  const requestGeo = useCallback(() => {
+    if (!hasCookieConsent()) {
+      setGeoStatus('denied');
+      return;
     }
+    if (!rateLimiter.current.canProceed()) {
+      setRateLimited(true);
+      return;
+    }
+    setRateLimited(false);
 
-    if (!navigator.geolocation) return;
-
+    if (!navigator.geolocation) {
+      setGeoStatus('denied');
+      return;
+    }
+    setGeoStatus('requesting');
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const { latitude, longitude } = pos.coords;
@@ -431,37 +441,41 @@ export default function SearchJobs({
               (data && data.address && (data.address.city || data.address.town || data.address.village || data.address.county)) ||
               '';
             const state = (data && data.address && data.address.state) || '';
-            userGeoCity.current = city;
-            userGeoState.current = state;
-            if (city) {
-              const matched = matchByCity(city, state, csvData, 12);
-              if (matched.length > 0) {
-                setSuggestedItems(matched);
-                setGeoLabel(`Near ${city}`);
-                return;
-              }
-            }
-            if (state) {
-              const matched = matchByCity('', state, csvData, 12);
-              if (matched.length > 0) {
-                setSuggestedItems(matched);
-                setGeoLabel(`In ${state}`);
-                return;
-              }
-            }
+            setUserGeoCity(city);
+            setUserGeoState(state);
+            setGeoStatus('granted');
+            if (city) setGeoLabel(`Near ${city}`);
+            else if (state) setGeoLabel(`In ${state}`);
           })
-          .catch(() => {});
+          .catch(() => setGeoStatus('denied'));
       },
-      () => {},
+      () => setGeoStatus('denied'),
       { timeout: 5000 },
     );
-  }, [fullyLoaded, csvData, showSuggestions]);
+  }, []);
 
-  // Match zip lookup results against CSV data
-  const matchZipToItems = useCallback((city, state, stateAbbr, data, licenseFilter, max) => {
+  // One-time Fisher–Yates shuffle of the dataset. Re-runs only when csvData
+  // itself changes (first-N → full file). Everything downstream that doesn't
+  // have a specific ordering signal (license, geo, search relevance) iterates
+  // this shuffled view, so users see a varied selection on each fresh load
+  // instead of "Aabc, Abbey, Aberdeen…" every time. Declared early so the zip
+  // useEffect and filteredPool useMemo can reference it without a TDZ error.
+  const shuffledData = useMemo(() => {
+    if (csvData.length === 0) return [];
+    const arr = [...csvData];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [csvData]);
+
+  // Match zip lookup results against CSV data — returns the full sorted list
+  // so the search-results Load More button can page through every match.
+  const matchZipToItems = useCallback((city, state, stateAbbr, data, licenseFilter) => {
     const cityLower = city.toLowerCase();
     const stateLower = state.toLowerCase();
-    const allMatches = data
+    return data
       .filter((d) => {
         if (licenseFilter !== 'All' && d.license !== licenseFilter) return false;
         const nameLower = d.name.toLowerCase();
@@ -481,7 +495,6 @@ export default function SearchJobs({
         if (!aCity && bCity) return 1;
         return 0;
       });
-    return { items: allMatches.slice(0, max), totalCount: allMatches.length };
   }, []);
 
   // Zip code lookup via Zippopotam.us
@@ -497,15 +510,10 @@ export default function SearchJobs({
       const cached = zipCache.current[trimmed];
       if (!cached) {
         setZipResults([]);
-        setZipTotalCount(0);
         setZipLoading(false);
         return;
       }
-      const { items, totalCount } = matchZipToItems(
-        cached.city, cached.state, cached.stateAbbr, csvData, filter, maxResults,
-      );
-      setZipResults(items);
-      setZipTotalCount(totalCount);
+      setZipResults(matchZipToItems(cached.city, cached.state, cached.stateAbbr, shuffledData, filter));
       setZipLoading(false);
       return;
     }
@@ -516,7 +524,6 @@ export default function SearchJobs({
 
     if (!rateLimiter.current.canProceed()) {
       setZipResults([]);
-      setZipTotalCount(0);
       setZipLoading(false);
       setRateLimited(true);
       return;
@@ -525,7 +532,6 @@ export default function SearchJobs({
 
     setZipLoading(true);
     setZipResults([]);
-    setZipTotalCount(0);
 
     const timeout = setTimeout(() => {
       fetch(`https://api.zippopotam.us/us/${trimmed}`, { signal: controller.signal })
@@ -538,7 +544,6 @@ export default function SearchJobs({
           if (!place) {
             zipCache.current[trimmed] = null;
             setZipResults([]);
-            setZipTotalCount(0);
             setZipLoading(false);
             return;
           }
@@ -546,16 +551,13 @@ export default function SearchJobs({
           const state = place['state'] || '';
           const stateAbbr = (place['state abbreviation'] && place['state abbreviation'].toLowerCase()) || '';
           zipCache.current[trimmed] = { city, state, stateAbbr };
-          const { items, totalCount } = matchZipToItems(city, state, stateAbbr, csvData, filter, maxResults);
-          setZipResults(items);
-          setZipTotalCount(totalCount);
+          setZipResults(matchZipToItems(city, state, stateAbbr, shuffledData, filter));
           setZipLoading(false);
         })
         .catch((err) => {
           if (err.name !== 'AbortError') {
             zipCache.current[trimmed] = null;
             setZipResults([]);
-            setZipTotalCount(0);
             setZipLoading(false);
           }
         });
@@ -565,37 +567,90 @@ export default function SearchJobs({
       clearTimeout(timeout);
       controller.abort();
     };
-  }, [query, csvData, filter, maxResults, matchZipToItems]);
+  }, [query, shuffledData, filter, matchZipToItems]);
 
   const allLicenses = useMemo(() => {
     const set = new Set(csvData.map((d) => d.license));
     return ['All', ...Array.from(set).sort()];
   }, [csvData]);
 
-  const displayedSuggested = useMemo(() => {
-    if (filter === 'All') return suggestedItems;
-    return suggestedItems.filter((d) => d.license === filter);
-  }, [suggestedItems, filter]);
+  // Full pool of suggestion candidates for the current filter:
+  // - filter === 'All': use whatever the geo/popular effect produced (curated)
+  // - filter === <license>: pull every item of that license from the full
+  //   dataset, sorted with geo preference first, then alphabetical. This is
+  //   what fixes "I pick CG and see zero results" — the 12-item curated cache
+  //   rarely contained items of every license.
+  const filteredPool = useMemo(() => {
+    // Curated popular-locations override: only honor when the user hasn't
+    // narrowed by license (otherwise we'd be hiding hundreds of valid matches).
+    if (filter === 'All' && suggestedItems.length > 0) return suggestedItems;
+
+    const pool =
+      filter === 'All' ? shuffledData : shuffledData.filter((d) => d.license === filter);
+    if (pool.length === 0) return [];
+
+    // No geo signal → return the shuffled order as-is so users see variety.
+    const city = userGeoCity.toLowerCase();
+    const state = userGeoState.toLowerCase();
+    if (!city && !state) return pool;
+
+    // Stable sort: items tied on geo-match level keep their shuffled order.
+    return [...pool].sort((a, b) => {
+      const aName = a.name.toLowerCase();
+      const bName = b.name.toLowerCase();
+      const aCity = city && aName.includes(city) ? 1 : 0;
+      const bCity = city && bName.includes(city) ? 1 : 0;
+      if (aCity !== bCity) return bCity - aCity;
+      const aState = state && aName.includes(state) ? 1 : 0;
+      const bState = state && bName.includes(state) ? 1 : 0;
+      if (aState !== bState) return bState - aState;
+      return 0;
+    });
+  }, [shuffledData, filter, suggestedItems, userGeoCity, userGeoState]);
+
+  // Shared pagination counter for both suggestions and search results. Reset
+  // any time the inputs change so the user starts at the top of a fresh list.
+  const [shownCount, setShownCount] = useState(maxResults);
+  useEffect(() => {
+    setShownCount(maxResults);
+  }, [filter, query, maxResults]);
+
+  const displayedSuggested = useMemo(
+    () => filteredPool.slice(0, shownCount),
+    [filteredPool, shownCount],
+  );
+  const hasMoreSuggestions = filteredPool.length > displayedSuggested.length;
 
   const filtered = useMemo(() => {
     if (!query.trim()) return [];
     if (isZipCode(query.trim())) return zipResults;
-    const q = query.toLowerCase();
-    return csvData
-      .filter((d) => {
-        if (filter !== 'All' && d.license !== filter) return false;
-        if (d.name.toLowerCase().includes(q)) return true;
-        const slugParts = d.slug.split('-');
-        const stateAbbr = slugParts[slugParts.length - 1] && slugParts[slugParts.length - 1].toLowerCase();
-        if (stateAbbr && stateAbbr.length === 2) {
-          if (stateAbbr === q) return true;
-          const fullState = US_STATES[stateAbbr];
-          if (fullState && fullState.includes(q)) return true;
-        }
-        return false;
-      })
-      .slice(0, maxResults);
-  }, [query, maxResults, filter, csvData, zipResults]);
+    const q = query.toLowerCase().trim();
+    // 2-char queries are almost always a state abbreviation. Restrict to
+    // exact slug-suffix matches so "UT" doesn't sweep in "Authority", "South…",
+    // or Connecticut (whose name contains "ut").
+    const isStateAbbrQuery = q.length === 2;
+    return shuffledData.filter((d) => {
+      if (filter !== 'All' && d.license !== filter) return false;
+      const slugParts = d.slug.split('-');
+      const stateAbbr =
+        slugParts[slugParts.length - 1] && slugParts[slugParts.length - 1].toLowerCase();
+      if (isStateAbbrQuery) {
+        return stateAbbr === q;
+      }
+      if (d.name.toLowerCase().includes(q)) return true;
+      if (stateAbbr && stateAbbr.length === 2) {
+        const fullState = US_STATES[stateAbbr];
+        if (fullState === q) return true;
+      }
+      return false;
+    });
+  }, [query, filter, shuffledData, zipResults]);
+
+  const displayedFiltered = useMemo(
+    () => filtered.slice(0, shownCount),
+    [filtered, shownCount],
+  );
+  const hasMoreFiltered = filtered.length > displayedFiltered.length;
 
   const trackSearch = useCallback(
     (q, f, count) => {
@@ -646,7 +701,7 @@ export default function SearchJobs({
     if (!query.trim()) return;
     debounceRef.current = setTimeout(() => {
       if (isZipCode(query.trim())) {
-        trackSearch(query, filter, zipTotalCount);
+        trackSearch(query, filter, zipResults.length);
         return;
       }
       const q = query.toLowerCase();
@@ -667,13 +722,13 @@ export default function SearchJobs({
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [query, filter, csvData, trackSearch, zipTotalCount]);
+  }, [query, filter, csvData, trackSearch, zipResults.length]);
 
   const sortItems = useCallback(
     (items) => {
       if (sortMode !== 'nearby') return items;
-      const city = userGeoCity.current.toLowerCase();
-      const state = userGeoState.current.toLowerCase();
+      const city = userGeoCity.toLowerCase();
+      const state = userGeoState.toLowerCase();
       if (!city && !state) return items;
       return [...items].sort((a, b) => {
         const aName = a.name.toLowerCase();
@@ -689,10 +744,10 @@ export default function SearchJobs({
         return 0;
       });
     },
-    [sortMode],
+    [sortMode, userGeoCity, userGeoState],
   );
 
-  const hasGeo = !!(userGeoCity.current || userGeoState.current);
+  const hasGeo = !!(userGeoCity || userGeoState);
 
   const PinIcon = ({ color, size = 14 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -794,29 +849,52 @@ export default function SearchJobs({
 
       {!loading &&
         showSuggestions &&
-        hasGeo &&
         (displayedSuggested.length > 0 || filtered.length > 0) && (
-          <div className="sj-sort-row">
-            {(['default', 'nearby']).map((mode) => {
-              const active = sortMode === mode;
-              const iconColor = active ? '#ffffff' : '#5924b0';
-              return (
-                <button
-                  key={mode}
-                  type="button"
-                  className={`sj-sort-btn${active ? ' is-active' : ''}`}
-                  onClick={() => setSortMode(mode)}
-                >
-                  {mode === 'nearby' && (
-                    <span style={{ marginRight: 4, display: 'inline-flex' }}>
-                      <PinIcon color={iconColor} />
-                    </span>
-                  )}
-                  {mode === 'default' ? 'Default' : 'Nearby'}
-                </button>
-              );
-            })}
-          </div>
+          <>
+            <div className="sj-sort-row">
+              {(['default', 'nearby']).map((mode) => {
+                const active = sortMode === mode;
+                const iconColor = active ? '#ffffff' : '#5924b0';
+                const isNearby = mode === 'nearby';
+                const isRequesting = isNearby && geoStatus === 'requesting';
+                return (
+                  <button
+                    key={mode}
+                    type="button"
+                    className={`sj-sort-btn${active ? ' is-active' : ''}`}
+                    disabled={isRequesting}
+                    onClick={() => {
+                      if (isNearby && geoStatus !== 'granted') {
+                        // First-time click on "Nearby": fire the permission
+                        // prompt + lookup. We'll flip sortMode after success.
+                        requestGeo();
+                      }
+                      setSortMode(mode);
+                    }}
+                  >
+                    {isNearby && (
+                      <span style={{ marginRight: 4, display: 'inline-flex' }}>
+                        <PinIcon color={iconColor} />
+                      </span>
+                    )}
+                    {mode === 'default'
+                      ? 'Default'
+                      : isRequesting
+                        ? 'Locating…'
+                        : 'Nearby'}
+                  </button>
+                );
+              })}
+            </div>
+            {sortMode === 'nearby' && geoStatus === 'denied' && (
+              <div className="sj-status sj-status--inline">
+                Location unavailable.{' '}
+                {!hasCookieConsent()
+                  ? 'Accept cookies to enable location-based sorting.'
+                  : 'Allow location access in your browser to enable nearby sorting.'}
+              </div>
+            )}
+          </>
         )}
 
       {!loading && showSuggestions && !query.trim() && displayedSuggested.length > 0 && (
@@ -835,15 +913,35 @@ export default function SearchJobs({
               />
             ))}
           </div>
+          {hasMoreSuggestions && (
+            <button
+              type="button"
+              className="sj-load-more"
+              onClick={() => setShownCount((c) => c + maxResults)}
+            >
+              Load more
+            </button>
+          )}
         </>
       )}
 
-      {filtered.length > 0 && (
-        <div className="sj-results">
-          {sortItems(filtered).map((item, i) => (
-            <ItemCard key={i} item={item} isDark={isDark} onClickTrack={trackClick} />
-          ))}
-        </div>
+      {displayedFiltered.length > 0 && (
+        <>
+          <div className="sj-results">
+            {sortItems(displayedFiltered).map((item, i) => (
+              <ItemCard key={i} item={item} isDark={isDark} onClickTrack={trackClick} />
+            ))}
+          </div>
+          {hasMoreFiltered && (
+            <button
+              type="button"
+              className="sj-load-more"
+              onClick={() => setShownCount((c) => c + maxResults)}
+            >
+              Load more
+            </button>
+          )}
+        </>
       )}
     </div>
   );
