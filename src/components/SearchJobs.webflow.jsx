@@ -3,10 +3,9 @@ import { props } from '@webflow/data-types';
 import SearchJobs from './SearchJobs';
 
 export default declareComponent(SearchJobs, {
-  name: 'Search Jobs Component',
+  name: 'Search Jobs',
   description:
     'Searchable list of PRN job locations grouped by license. Data is bundled into a single JSON file served from jsDelivr (rebuilt from CSVs in public/searchjobs-csv/ via the update-searchjobs skill).',
-  group: 'Analytics',
   props: {
     title: props.Text({
       name: 'Title',

@@ -1,6 +1,6 @@
 {
   "library": {
-    "name": "Facilities Search form",
+    "name": "Custom Code Components",
     "components": [
       "./src/**/*.webflow.@(js|jsx|mjs|ts|tsx)"
     ],
