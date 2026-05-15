@@ -1,10 +1,10 @@
 import './App.css';
-import ShiftBlocks from './components/ShiftBlocks';
+import SearchJobs from './components/SearchJobs';
 
 function App() {
   return (
     <div className="App">
-      <ShiftBlocks page={0} limit={20} columns="3" cardLayout="facility" />
+      <SearchJobs />
     </div>
   );
 }

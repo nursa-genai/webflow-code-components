@@ -1,0 +1,678 @@
+name,slug,pay,license
+Aberdeen WA,per-diem-aberdeen-wa,23.77,cna er
+Abingdon,per-diem-abingdon-va,24.08,cna er
+Affton,per-diem-affton-mo,25.61,cna er
+Akron,per-diem-akron-oh,25.56,cna er
+Alachua,per-diem-alachua-fl,24.08,cna er
+Alafaya,per-diem-alafaya-fl,25.65,cna er
+Albany GA,per-diem-albany-ga,26.00,cna er
+Albany OR,per-diem-albany-or,23.24,cna er
+Albuquerque,per-diem-albuquerque-nm,24.53,cna er
+Alexandria LA,per-diem-alexandria-la,24.53,cna er
+Alexandria VA,per-diem-alexandria-va,23.77,cna er
+Alhambra,per-diem-alhambra-ca,24.53,cna er
+Allentown,per-diem-allentown-pa,25.32,cna er
+Alpine,per-diem-alpine-ut,23.77,cna er
+Alsea,per-diem-alsea-or,23.77,cna er
+Alton,per-diem-alton-tx,24.08,cna er
+Altoona,per-diem-altoona-pa,25.64,cna er
+Altoona IA,per-diem-altoona-ia,25.67,cna er
+Alvarado,per-diem-alvarado-tx,23.77,cna er
+Alvin,per-diem-alvin-tx,24.08,cna er
+Amado,per-diem-amado-az,22.23,cna er
+American Fork,per-diem-american-fork-ut,24.08,cna er
+Anacortes,per-diem-anacortes-wa,24.53,cna er
+Anahuac,per-diem-anahuac-tx,23.77,cna er
+Anchorage,per-diem-anchorage-ak,23.55,cna er
+Ankeny,per-diem-ankeny-ia,26.11,cna er
+Apache Junction,per-diem-apache-junction-az,24.53,cna er
+Arlington,per-diem-arlington-tx,24.08,cna er
+Arlington VA,per-diem-arlington-va,25.56,cna er
+Arlington WA,per-diem-arlington-wa,24.08,cna er
+Arnold,per-diem-arnold-mo,25.43,cna er
+Arvada,per-diem-arvada-co,23.77,cna er
+Asheville NC,per-diem-asheville-nc,23.77,cna er
+Ashland City,per-diem-ashland-city-tn,25.61,cna er
+Ashland OR,per-diem-ashland-or,24.53,cna er
+Astoria OR,per-diem-astoria-or,24.53,cna er
+Athens,per-diem-athens-oh,25.74,cna er
+Atlanta GA,per-diem-atlanta-ga,25.68,cna er
+Atlantic City,per-diem-atlantic-city-nj,25.99,cna er
+Attalla,per-diem-attalla-al,24.53,cna er
+Atwood,per-diem-atwood-ks,23.77,cna er
+Auburn,per-diem-auburn-me,25.61,cna er
+Auburn IN,per-diem-auburn-in,24.53,cna er
+Auburn NY,per-diem-auburn-ny,24.08,cna er
+Augusta,per-diem-augusta-ga,25.30,cna er
+Aurora,per-diem-aurora-co,24.53,cna er
+Aurora,per-diem-aurora-il,25.67,cna er
+Austin TX,per-diem-austin-tx,24.08,cna er
+Austintown,per-diem-austintown-oh,25.03,cna er
+Avon CT,per-diem-avon-ct,25.56,cna er
+Avon Lake,per-diem-avon-lake-oh,25.95,cna er
+Bailey,per-diem-bailey-co,23.77,cna er
+BAINBRIDGE ISLAND,per-diem-bainbridge-island-wa,23.77,cna er
+Baird,per-diem-baird-tx,23.55,cna er
+Baker,per-diem-baker-wv,23.77,cna er
+Baltimore MD,per-diem-baltimore-md,23.77,cna er
+Bangor,per-diem-bangor-me,24.53,cna er
+Baton Rouge,per-diem-baton-rouge-la,24.08,cna er
+Battle Mountain,per-diem-battle-mountain-nv,24.01,cna er
+Beaumont,per-diem-beaumont-tx,23.77,cna er
+Beaver,per-diem-beaver-ut,23.77,cna er
+Beaverton,per-diem-beaverton-or,23.55,cna er
+Beckley,per-diem-beckley-wv,25.92,cna er
+Bedford TX,per-diem-bedford-tx,24.53,cna er
+Bell,per-diem-bell-ca,23.97,cna er
+Bellevue WA,per-diem-bellevue-wa,24.08,cna er
+Bellingham,per-diem-bellingham-wa,25.84,cna er
+Belton MO,per-diem-belton-mo,24.01,cna er
+Belton TX,per-diem-belton-tx,23.77,cna er
+Bend,per-diem-bend-or,23.77,cna er
+Bergenfield,per-diem-bergenfield-nj,24.53,cna er
+Berthoud,per-diem-berthoud-co,23.55,cna er
+Billings MT,per-diem-billings-mt,24.08,cna er
+Biloxi,per-diem-biloxi-ms,25.32,cna er
+Birmingham,per-diem-birmingham-al,24.08,cna er
+Bisbee,per-diem-bisbee-az,22.23,cna er
+Biscoe,per-diem-biscoe-nc,24.06,cna er
+Bishopville,per-diem-bishopville-sc,23.77,cna er
+Blacksburg,per-diem-blacksburg-va,24.01,cna er
+Bloomfield,per-diem-bloomfield-ct,23.24,cna er
+Bloomington,per-diem-bloomington-mn,26.10,cna er
+Bloomsburg,per-diem-bloomsburg-pa,24.08,cna er
+Blowing Rock,per-diem-blowing-rock-nc,24.51,cna er
+Blue Springs,per-diem-blue-springs-mo,25.84,cna er
+Bly,per-diem-bly-or,24.53,cna er
+Boerne,per-diem-boerne-tx,23.55,cna er
+Boise ID,per-diem-boise-id,23.77,cna er
+Bolingbrook,per-diem-bolingbrook-il,24.53,cna er
+Boone NC,per-diem-boone-nc,24.53,cna er
+Bossier City,per-diem-bossier-city-la,23.77,cna er
+Boston,per-diem-boston-ma,24.53,cna er
+Boulder,per-diem-boulder-co,24.08,cna er
+Boulder City,per-diem-boulder-city-nv,24.08,cna er
+Bountiful,per-diem-bountiful-ut,23.77,cna er
+Bouse,per-diem-bouse-az,23.77,cna er
+Bowie,per-diem-bowie-md,26.00,cna er
+Bowling Green,per-diem-bowling-green-ky,23.77,cna er
+Bowling Green,per-diem-bowling-green-oh,25.85,cna er
+Bozeman MT,per-diem-bozeman-mt,24.08,cna er
+Bremerton,per-diem-bremerton-wa,25.03,cna er
+Bridgeport,per-diem-bridgeport-ct,25.95,cna er
+Brighton CO,per-diem-brighton-co,24.53,cna er
+Broken Arrow,per-diem-broken-arrow-ok,23.77,cna er
+Brooklyn,per-diem-brooklyn-ct,25.49,cna er
+Brunswick,per-diem-brunswick-mo,25.67,cna er
+Brunswick,per-diem-brunswick-oh,25.38,cna er
+Bryn Athyn Huntingdon Valley,per-diem-bryn-athyn-huntingdon-valley-pa,25.64,cna er
+Buffalo,per-diem-buffalo-ny,25.45,cna er
+Buna,per-diem-buna-tx,23.55,cna er
+Burke,per-diem-burke-va,25.00,cna er
+Butte MT,per-diem-butte-mt,24.08,cna er
+Cambridge,per-diem-cambridge-md,23.77,cna er
+Cape Girardeau,per-diem-cape-girardeau-mo,25.65,cna er
+Cape May,per-diem-cape-may-nj,25.87,cna er
+Carmel,per-diem-carmel-in,23.77,cna er
+Cedar Rapids,per-diem-cedar-rapids-ia,25.55,cna er
+Centerville OH,per-diem-centerville-oh,25.61,cna er
+Centreville,per-diem-centreville-va,25.54,cna er
+Chandler,per-diem-chandler-az,24.08,cna er
+Charleston,per-diem-charleston-sc,24.01,cna er
+Charleston,per-diem-charleston-wv,25.68,cna er
+Charlotte Elizabeth,per-diem-charlotte-elizabeth-nc,26.31,cna er
+Charlotte Myers Park,per-diem-charlotte-myers-park-nc,25.74,cna er
+Charlotte NC,per-diem-charlotte-nc,23.77,cna er
+Charlotte Plaza-Shamrock,per-diem-charlotte-plaza-shamrock-nc,25.85,cna er
+Charlottesville,per-diem-charlottesville-va,25.65,cna er
+Chattanooga,per-diem-chattanooga-tn,23.77,cna er
+Cheektowaga,per-diem-cheektowaga-ny,25.61,cna er
+Chesapeake,per-diem-chesapeake-va,26.18,cna er
+Chesterville,per-diem-chesterville-oh,25.20,cna er
+Chicago IL,per-diem-chicago-il,24.53,cna er
+Chicago Ridge,per-diem-chicago-ridge-il,25.21,cna er
+Chicago Rogers Park,per-diem-chicago-rogers-park-il,24.06,cna er
+Chico,per-diem-chico-ca,25.55,cna er
+Clarksburg,per-diem-clarksburg-wv,26.10,cna er
+Clarksville,per-diem-clarksville-tn,25.95,cna er
+Clatskanie,per-diem-clatskanie-or,23.77,cna er
+Cleveland Heights,per-diem-cleveland-heights-oh,25.22,cna er
+Cleveland OH,per-diem-cleveland-oh,24.53,cna er
+Clifton Forge,per-diem-clifton-forge-va,24.08,cna er
+Clifton NJ,per-diem-clifton-nj,24.53,cna er
+Colorado Springs,per-diem-colorado-springs-co,24.08,cna er
+Columbia,per-diem-columbia-sc,25.83,cna er
+Columbia Falls,per-diem-columbia-falls-mt,25.95,cna er
+Columbia MO,per-diem-columbia-mo,25.55,cna er
+Columbus GA,per-diem-columbus-ga,25.40,cna er
+Columbus OH,per-diem-columbus-oh,23.77,cna er
+Coralville,per-diem-coralville-ia,25.38,cna er
+Cornelius,per-diem-cornelius-nc,23.47,cna er
+Corpus Christi Central City,per-diem-corpus-christi-central-city-tx,25.95,cna er
+Country Club,per-diem-country-club-fl,25.23,cna er
+Covington,per-diem-covington-ky,25.68,cna er
+Cuyahoga Falls,per-diem-cuyahoga-falls-oh,25.14,cna er
+Dallas TX,per-diem-dallas-tx,24.08,cna er
+Dallastown,per-diem-dallastown-pa,23.77,cna er
+Dalton,per-diem-dalton-ga,25.57,cna er
+Danville,per-diem-danville-va,25.68,cna er
+Davenport IA,per-diem-davenport-ia,25.61,cna er
+Denver City Park West,per-diem-denver-city-park-west-co,24.06,cna er
+Denver CO,per-diem-denver-co,27.57,cna er
+Denville,per-diem-denville-nj,22.23,cna er
+Derby,per-diem-derby-ks,25.68,cna er
+Des Moines,per-diem-des-moines-ia,24.08,cna er
+Des Moines Downtown Des Moines,per-diem-des-moines-downtown-des-moines-ia,23.49,cna er
+Destin,per-diem-destin-fl,23.77,cna er
+Detroit,per-diem-detroit-mi,23.24,cna er
+Dillon MT,per-diem-dillon-mt,25.55,cna er
+Dodge City,per-diem-dodge-city-ks,25.74,cna er
+Doral,per-diem-doral-fl,24.53,cna er
+Douglasville,per-diem-douglasville-ga,25.66,cna er
+Dover,per-diem-dover-de,25.78,cna er
+Downington,per-diem-downington-pa,26.10,cna er
+Dublin TX,per-diem-dublin-tx,24.01,cna er
+Duluth,per-diem-duluth-ga,25.85,cna er
+Duluth,per-diem-duluth-mn,25.20,cna er
+Durham NC,per-diem-durham-nc,23.77,cna er
+Easton,per-diem-easton-pa,25.35,cna er
+Edison,per-diem-edison-nj,23.77,cna er
+Egg Harbor Township,per-diem-egg-harbor-township-nj,25.45,cna er
+El Cerrito,per-diem-el-cerrito-ca,25.95,cna er
+El Paso West Central El Paso,per-diem-el-paso-west-central-el-paso-tx,25.83,cna er
+Elbert,per-diem-elbert-co,25.94,cna er
+Elko,per-diem-elko-nv,24.08,cna er
+Ellenton,per-diem-ellenton-fl,24.01,cna er
+Elsa,per-diem-elsa-tx,22.23,cna er
+Emporia,per-diem-emporia-ks,25.03,cna er
+Enfield,per-diem-enfield-ct,24.51,cna er
+Enid,per-diem-enid-ok,25.32,cna er
+Erie,per-diem-erie-pa,25.85,cna er
+Euclid,per-diem-euclid-oh,25.67,cna er
+Eugene,per-diem-eugene-or,25.56,cna er
+Evans GA,per-diem-evans-ga,25.37,cna er
+Evansville,per-diem-evansville-in,25.85,cna er
+Fairborn,per-diem-fairborn-oh,25.75,cna er
+Fairfield,per-diem-fairfield-oh,25.48,cna er
+Fairfield ME,per-diem-fairfield-me,22.23,cna er
+Fayetteville,per-diem-fayetteville-ar,26.18,cna er
+Findlay,per-diem-findlay-oh,25.68,cna er
+Florissant,per-diem-florissant-mo,25.95,cna er
+Fontanelle,per-diem-fontanelle-ia,23.77,cna er
+Fort Collins,per-diem-fort-collins-co,24.08,cna er
+Fort Smith,per-diem-fort-smith-ar,24.08,cna er
+Fort Wayne,per-diem-fort-wayne-in,24.08,cna er
+Fort Worth,per-diem-fort-worth-tx,24.08,cna er
+Fountain Inn,per-diem-fountain-inn-sc,26.11,cna er
+Fountainebleau,per-diem-fountainebleau-fl,25.43,cna er
+Frankfort KY,per-diem-frankfort-ky,23.24,cna er
+Frederick MD,per-diem-frederick-md,23.77,cna er
+Fresno CA,per-diem-fresno-ca,23.77,cna er
+Friona,per-diem-friona-tx,24.08,cna er
+Fruit Cove,per-diem-fruit-cove-fl,25.83,cna er
+Gainesville GA,per-diem-gainesville-ga,25.43,cna er
+Gaithersburg,per-diem-gaithersburg-md,25.48,cna er
+Garden City,per-diem-garden-city-ks,25.44,cna er
+Garfield Heights,per-diem-garfield-heights-oh,25.23,cna er
+Georgetown,per-diem-georgetown-de,25.74,cna er
+Gilbert AZ,per-diem-gilbert-az,24.53,cna er
+Golden Glades,per-diem-golden-glades-fl,25.84,cna er
+Goose Creek,per-diem-goose-creek-sc,25.36,cna er
+Grants Pass,per-diem-grants-pass-or,23.77,cna er
+Great Falls,per-diem-great-falls-mt,23.77,cna er
+Green,per-diem-green-oh,25.92,cna er
+Green Cove Springs,per-diem-green-cove-springs-fl,23.77,cna er
+Gresham,per-diem-gresham-or,23.77,cna er
+Grove City,per-diem-grove-city-oh,26.10,cna er
+Gulfport,per-diem-gulfport-ms,25.43,cna er
+Hailey,per-diem-hailey-id,24.53,cna er
+Hamilton,per-diem-hamilton-oh,25.41,cna er
+Harrisburg,per-diem-harrisburg-pa,25.64,cna er
+Harrisonburg,per-diem-harrisonburg-va,25.74,cna er
+Hartford,per-diem-hartford-ct,23.55,cna er
+Harvey,per-diem-harvey-il,24.53,cna er
+Hattiesburg,per-diem-hattiesburg-ms,23.77,cna er
+Haverford,per-diem-haverford-pa,25.57,cna er
+Hawkins,per-diem-hawkins-tx,24.53,cna er
+Henderson NV,per-diem-henderson-nv,23.77,cna er
+Hilliard,per-diem-hilliard-oh,25.37,cna er
+Hillsboro OR,per-diem-hillsboro-or,24.08,cna er
+Hillsboro TX,per-diem-hillsboro-tx,24.01,cna er
+Hinesville,per-diem-hinesville-ga,26.18,cna er
+Holland,per-diem-holland-oh,25.68,cna er
+Honolulu,per-diem-honolulu-hi,24.53,cna er
+Horsham,per-diem-horsham-pa,25.43,cna er
+Houston,per-diem-houston-tx,24.08,cna er
+Houston Southeast Houston,per-diem-houston-southeast-houston-tx,25.14,cna er
+Huber Heights,per-diem-huber-heights-oh,25.57,cna er
+Hudson OH,per-diem-hudson-oh,25.47,cna er
+Huntington,per-diem-huntington-wv,25.74,cna er
+Huntsville,per-diem-huntsville-al,25.38,cna er
+Hurst,per-diem-hurst-tx,23.77,cna er
+Idaho Falls,per-diem-idaho-falls-id,23.77,cna er
+Independence MO,per-diem-independence-mo,23.77,cna er
+Indianapolis,per-diem-indianapolis-in,22.23,cna er
+Indianapolis Downtown,per-diem-indianapolis-downtown-in,25.23,cna er
+Iva,per-diem-iva-sc,25.65,cna er
+Jackson,per-diem-jackson-ms,24.53,cna er
+Jacksonville,per-diem-jacksonville-ar,25.92,cna er
+Jacksonville FL,per-diem-jacksonville-fl,24.53,cna er
+Jay,per-diem-jay-ok,24.08,cna er
+Jefferson City,per-diem-jefferson-city-mo,25.92,cna er
+Jena,per-diem-jena-la,24.08,cna er
+Jersey City,per-diem-jersey-city-nj,23.77,cna er
+Joliet,per-diem-joliet-il,25.93,cna er
+Jonesboro,per-diem-jonesboro-ar,25.32,cna er
+Jourdanton,per-diem-jourdanton-tx,25.55,cna er
+Junction City,per-diem-junction-city-ks,25.61,cna er
+Kane,per-diem-kane-pa,24.01,cna er
+Kansas City KS,per-diem-kansas-city-ks,24.53,cna er
+Kansas City MO,per-diem-kansas-city-mo,23.77,cna er
+Katy,per-diem-katy-tx,24.08,cna er
+Kaysville,per-diem-kaysville-ut,24.08,cna er
+Kendall,per-diem-kendall-fl,25.68,cna er
+Kennewick,per-diem-kennewick-wa,25.43,cna er
+Kent,per-diem-kent-wa,25.95,cna er
+Kerrville,per-diem-kerrville-tx,24.53,cna er
+Kettering,per-diem-kettering-oh,25.38,cna er
+Kingman,per-diem-kingman-az,24.08,cna er
+Kingwood,per-diem-kingwood-tx,25.56,cna er
+Kirkwood,per-diem-kirkwood-mo,25.47,cna er
+Knoxville,per-diem-knoxville-tn,25.95,cna er
+Kuna,per-diem-kuna-id,25.55,cna er
+Kyle,per-diem-kyle-tx,24.08,cna er
+La Grange Park,per-diem-la-grange-park-il,23.47,cna er
+Lafayette,per-diem-lafayette-la,24.08,cna er
+Lafayette CO,per-diem-lafayette-co,24.53,cna er
+LaGrange,per-diem-lagrange-ga,25.61,cna er
+Lake Charles,per-diem-lake-charles-la,25.99,cna er
+Lake Havasu,per-diem-lake-havasu-az,24.53,cna er
+Lake Magdalene,per-diem-lake-magdalene-fl,25.00,cna er
+Lakeside FL,per-diem-lakeside-fl,25.61,cna er
+Lakewood,per-diem-lakewood-co,24.53,cna er
+Lakewood,per-diem-lakewood-oh,25.47,cna er
+Lamar,per-diem-lamar-co,24.53,cna er
+Las Vegas,per-diem-las-vegas-nv,24.53,cna er
+Las Vegas Centennial Hills,per-diem-las-vegas-centennial-hills-nv,25.61,cna er
+Lawrence,per-diem-lawrence-ks,25.61,cna er
+Lawton,per-diem-lawton-ok,23.77,cna er
+Leavenworth,per-diem-leavenworth-ks,25.92,cna er
+Leawood,per-diem-leawood-ks,25.47,cna er
+Lebanon,per-diem-lebanon-oh,25.61,cna er
+Lebanon City,per-diem-lebanon-city-pa,26.10,cna er
+Lenexa,per-diem-lenexa-ks,25.23,cna er
+Lewiston ME,per-diem-lewiston-me,24.01,cna er
+Lima,per-diem-lima-oh,25.43,cna er
+Limon,per-diem-limon-co,23.77,cna er
+Linton Hall,per-diem-linton-hall-va,25.94,cna er
+Little Rock,per-diem-little-rock-ar,25.57,cna er
+Littleton CO,per-diem-littleton-co,23.77,cna er
+Long Branch,per-diem-long-branch-nj,25.47,cna er
+Lorain,per-diem-lorain-oh,25.87,cna er
+Los Angeles,per-diem-los-angeles-ca,23.77,cna er
+Louisville KY,per-diem-louisville-ky,24.08,cna er
+Lyons,per-diem-lyons-il,25.54,cna er
+Lytle,per-diem-lytle-tx,23.77,cna er
+Macon,per-diem-macon-ga,25.25,cna er
+Manalapan Township,per-diem-manalapan-township-nj,25.92,cna er
+Manhattan,per-diem-manhattan-ks,25.99,cna er
+Maple Heights,per-diem-maple-heights-oh,25.44,cna er
+Marietta,per-diem-marietta-ga,23.24,cna er
+Martinez GA,per-diem-martinez-ga,25.38,cna er
+Martinsburg,per-diem-martinsburg-wv,25.54,cna er
+Maryland Heights,per-diem-maryland-heights-mo,25.99,cna er
+Marysville,per-diem-marysville-oh,25.14,cna er
+Mason,per-diem-mason-oh,25.50,cna er
+Mayo,per-diem-mayo-fl,24.08,cna er
+McCormick,per-diem-mccormick-sc,25.23,cna er
+McLean,per-diem-mclean-va,25.61,cna er
+Mechanicsville,per-diem-mechanicsville-va,25.14,cna er
+Medina,per-diem-medina-oh,25.99,cna er
+Memphis,per-diem-memphis-tn,25.59,cna er
+Menard,per-diem-menard-tx,23.55,cna er
+Mentone,per-diem-mentone-ca,25.85,cna er
+Mentor,per-diem-mentor-oh,25.35,cna er
+Meridian,per-diem-meridian-id,24.53,cna er
+Mesa,per-diem-mesa-az,24.53,cna er
+Miami,per-diem-miami-fl,24.08,cna er
+Miamisburg,per-diem-miamisburg-oh,25.54,cna er
+Middletown,per-diem-middletown-ct,25.03,cna er
+Middletown,per-diem-middletown-de,25.50,cna er
+Middletown,per-diem-middletown-oh,25.93,cna er
+Milan,per-diem-milan-mo,24.01,cna er
+Minneapolis,per-diem-minneapolis-mn,25.43,cna er
+Missoula,per-diem-missoula-mt,25.74,cna er
+Mobile,per-diem-mobile-al,25.61,cna er
+Monroe LA,per-diem-monroe-la,24.08,cna er
+Montgomery,per-diem-montgomery-al,25.25,cna er
+Moody,per-diem-moody-tx,24.53,cna er
+Morehead,per-diem-morehead-ky,25.14,cna er
+Morgantown,per-diem-morgantown-in,24.08,cna er
+Morgantown,per-diem-morgantown-wv,25.47,cna er
+Morton WA,per-diem-morton-wa,24.08,cna er
+Moscow,per-diem-moscow-id,24.08,cna er
+Mount Dora,per-diem-mount-dora-fl,25.56,cna er
+Mount Lebanon,per-diem-mount-lebanon-pa,26.13,cna er
+Mount Pleasant,per-diem-mount-pleasant-sc,25.84,cna er
+Mount Vernon,per-diem-mount-vernon-oh,25.23,cna er
+Nampa,per-diem-nampa-id,24.08,cna er
+Naperville,per-diem-naperville-il,25.38,cna er
+Nash,per-diem-nash-tx,25.56,cna er
+Nashville,per-diem-nashville-tn,24.01,cna er
+Nevada City,per-diem-nevada-city-ca,26.18,cna er
+New Haven,per-diem-new-haven-ct,23.77,cna er
+New Orleans,per-diem-new-orleans-la,22.23,cna er
+New Orleans Mid-City,per-diem-new-orleans-mid-city-la,25.03,cna er
+New Providence,per-diem-new-providence-nj,25.61,cna er
+New york,per-diem-new-york-ny,23.24,cna er
+New York City,per-diem-new-york-city-ny,23.77,cna er
+Newark,per-diem-newark-nj,23.77,cna er
+Newark DE,per-diem-newark-de,24.08,cna er
+Newnan,per-diem-newnan-ga,25.03,cna er
+Newport News,per-diem-newport-news-va,25.32,cna er
+Newville,per-diem-newville-pa,25.55,cna er
+Nixa,per-diem-nixa-mo,26.18,cna er
+Nogales,per-diem-nogales-az,23.77,cna er
+Norfolk,per-diem-norfolk-va,25.49,cna er
+Norman OK,per-diem-norman-ok,24.01,cna er
+North Charleston,per-diem-north-charleston-sc,22.23,cna er
+North Fort Myers,per-diem-north-fort-myers-fl,25.74,cna er
+North Las Vegas,per-diem-north-las-vegas-nv,24.08,cna er
+North Liberty,per-diem-north-liberty-ia,25.93,cna er
+Northwood,per-diem-northwood-ia,25.38,cna er
+Norton,per-diem-norton-va,25.55,cna er
+Norwalk,per-diem-norwalk-ct,24.08,cna er
+Norway Norway,per-diem-norway-norway-me,26.18,cna er
+Norwood NJ,per-diem-norwood-nj,23.97,cna er
+O'Fallon,per-diem-o-fallon-il,24.53,cna er
+O'Fallon MO,per-diem-ofallon-mo,25.10,cna er
+Oberlin,per-diem-oberlin-la,23.77,cna er
+Odessa FL,per-diem-odessa-fl,24.08,cna er
+Ogden,per-diem-ogden-ut,23.55,cna er
+Oklahoma City,per-diem-oklahoma-city-ok,24.01,cna er
+Oklahoma City Northwest Oklahoma City,per-diem-oklahoma-city-northwest-oklahoma-city-ok,25.54,cna er
+Oklahoma City Preston Hills,per-diem-oklahoma-city-preston-hills-ok,23.38,cna er
+Olathe,per-diem-olathe-co,23.24,cna er
+Olathe,per-diem-olathe-ks,25.74,cna er
+Omaha,per-diem-omaha-ne,23.55,cna er
+Orange County CA,per-diem-orange-county-ca,24.53,cna er
+Orem,per-diem-orem-ut,24.01,cna er
+Orem Orem Park,per-diem-orem-orem-park-ut,25.10,cna er
+Orlando FL,per-diem-orlando-fl,23.77,cna er
+Oswego,per-diem-oswego-ny,25.56,cna er
+Ottumwa,per-diem-ottumwa-ia,25.77,cna er
+Overland Park,per-diem-overland-park-ks,25.03,cna er
+Owensboro,per-diem-owensboro-ky,25.85,cna er
+Oxford OH,per-diem-oxford-oh,25.68,cna er
+Ozark,per-diem-ozark-mo,25.64,cna er
+Painesville,per-diem-painesville-oh,25.10,cna er
+Palmview,per-diem-palmview-tx,23.77,cna er
+Pampa,per-diem-pampa-tx,25.56,cna er
+Paris South Paris,per-diem-paris-south-paris-me,25.07,cna er
+Parkersburg,per-diem-parkersburg-wv,25.44,cna er
+Pasco WA,per-diem-pasco-wa,24.53,cna er
+Paterson,per-diem-paterson-nj,23.77,cna er
+Peachtree City,per-diem-peachtree-city-ga,25.23,cna er
+Pekin,per-diem-pekin-il,23.77,cna er
+Pella,per-diem-pella-ia,23.24,cna er
+Pensacola North Central Pensacola,per-diem-pensacola-north-central-pensacola-fl,25.65,cna er
+Peoria IL,per-diem-peoria-il,23.55,cna er
+Perrine,per-diem-perrine-fl,23.77,cna er
+Perrysburg,per-diem-perrysburg-oh,25.25,cna er
+Philadelphia PA,per-diem-philadelphia-pa,24.08,cna er
+Phoenix,per-diem-phoenix-az,24.01,cna er
+Phoenix Camelback East Village,per-diem-phoenix-camelback-east-village-az,25.99,cna er
+Phoenix Deer Valley,per-diem-phoenix-deer-valley-az,25.92,cna er
+Phoenix North Mountain Village,per-diem-phoenix-north-mountain-village-az,26.11,cna er
+Pine Hills,per-diem-pine-hills-fl,25.54,cna er
+Piqua,per-diem-piqua-oh,25.99,cna er
+Pittsburg,per-diem-pittsburg-ks,25.23,cna er
+Pittsburgh PA,per-diem-pittsburgh-pa,24.01,cna er
+Plano,per-diem-plano-tx,24.53,cna er
+Pleasantville,per-diem-pleasantville-tn,25.55,cna er
+Pocatello ID,per-diem-pocatello-id,24.53,cna er
+Poinciana,per-diem-poinciana-fl,25.95,cna er
+Pontiac IL,per-diem-pontiac-il,24.08,cna er
+Port Saint Joe,per-diem-port-saint-joe-fl,23.77,cna er
+Portland ME,per-diem-portland-me,23.77,cna er
+Portland OR,per-diem-portland-or,24.53,cna er
+Portsmouth,per-diem-portsmouth-va,25.85,cna er
+Poth,per-diem-poth-tx,24.53,cna er
+Prairie Village,per-diem-prairie-village-ks,25.03,cna er
+Price,per-diem-price-ut,24.53,cna er
+Princeton FL,per-diem-princeton-fl,25.85,cna er
+Prospect Heights,per-diem-prospect-heights-ny,25.94,cna er
+Providence RI,per-diem-providence-ri,24.08,cna er
+Provo,per-diem-provo-ut,23.77,cna er
+Pulaski,per-diem-pulaski-va,23.77,cna er
+Raleigh,per-diem-raleigh-nc,25.85,cna er
+Raleigh North Hills,per-diem-raleigh-north-hills-nc,25.32,cna er
+Rathdrum,per-diem-rathdrum-id,23.77,cna er
+Raytown,per-diem-raytown-mo,25.54,cna er
+Redan,per-diem-redan-ga,25.85,cna er
+Redmond,per-diem-redmond-or,23.77,cna er
+Reno,per-diem-reno-nv,24.08,cna er
+Renton,per-diem-renton-wa,25.56,cna er
+Reynoldsburg,per-diem-reynoldsburg-oh,25.66,cna er
+Richmond VA,per-diem-richmond-va,24.53,cna er
+Rifle,per-diem-rifle-co,23.77,cna er
+Rigby,per-diem-rigby-id,24.08,cna er
+Rio Rico,per-diem-rio-rico-az,24.53,cna er
+Roanoke,per-diem-roanoke-va,25.99,cna er
+Rochester,per-diem-rochester-mn,25.37,cna er
+Rock Hill,per-diem-rock-hill-sc,25.43,cna er
+Rockford,per-diem-rockford-il,24.53,cna er
+Rockville,per-diem-rockville-md,25.22,cna er
+Rockwell,per-diem-rockwell-ia,25.61,cna er
+Rome,per-diem-rome-ny,25.55,cna er
+Rome GA,per-diem-rome-ga,25.54,cna er
+Roy,per-diem-roy-ut,24.08,cna er
+Rupert,per-diem-rupert-id,23.77,cna er
+Sacaton,per-diem-sacaton-az,23.77,cna er
+Saint Louis,per-diem-saint-louis-mo,24.53,cna er
+Saint Petersburg,per-diem-saint-petersburg-fl,23.77,cna er
+Salem,per-diem-salem-or,24.53,cna er
+Salem VA,per-diem-salem-va,24.08,cna er
+Salem West Salem,per-diem-salem-west-salem-or,25.49,cna er
+Salina KS,per-diem-salina-ks,23.77,cna er
+Salt Lake City,per-diem-salt-lake-city-ut,23.55,cna er
+Saluda,per-diem-saluda-nc,25.07,cna er
+Sammamish,per-diem-sammamish-wa,25.99,cna er
+San Antonio,per-diem-san-antonio-tx,24.08,cna er
+San Clemente,per-diem-san-clemente-ca,24.01,cna er
+San Diego CA,per-diem-san-diego-ca,22.87,cna er
+San Francisco,per-diem-san-francisco-ca,25.83,cna er
+San Francisco Excelsior,per-diem-san-francisco-excelsior-ca,25.38,cna er
+San Jose,per-diem-san-jose-ca,24.08,cna er
+San Luis,per-diem-san-luis-az,24.53,cna er
+Sandusky,per-diem-sandusky-oh,25.59,cna er
+Sandy OR,per-diem-sandy-or,24.08,cna er
+Sandy Springs,per-diem-sandy-springs-ga,25.14,cna er
+Savannah,per-diem-savannah-ga,24.08,cna er
+Scotts Valley,per-diem-scotts-valley-ca,25.03,cna er
+Scottsdale,per-diem-scottsdale-az,24.08,cna er
+Scottsdale North Scottsdale,per-diem-scottsdale-north-scottsdale-az,25.64,cna er
+Scranton,per-diem-scranton-pa,25.54,cna er
+Seattle WA,per-diem-seattle-wa,23.77,cna er
+Shawnee,per-diem-shawnee-ks,25.54,cna er
+Shelley,per-diem-shelley-id,24.53,cna er
+Shenandoah IA,per-diem-shenandoah-ia,23.77,cna er
+Shepherd,per-diem-shepherd-tx,24.53,cna er
+Sidney OH,per-diem-sidney-oh,25.36,cna er
+Silver Spring MD,per-diem-silver-spring-md,23.77,cna er
+Sioux City,per-diem-sioux-city-ia,23.24,cna er
+Smyrna GA,per-diem-smyrna-ga,25.25,cna er
+South Bend,per-diem-south-bend-in,25.03,cna er
+South Charleston,per-diem-south-charleston-wv,25.25,cna er
+South Hill,per-diem-south-hill-wa,25.10,cna er
+South Miami Heights,per-diem-south-miami-heights-fl,25.32,cna er
+South Portland,per-diem-south-portland-me,24.08,cna er
+Southaven,per-diem-southaven-ms,25.64,cna er
+Southbury,per-diem-southbury-ct,26.10,cna er
+Sparks,per-diem-sparks-nv,23.55,cna er
+Spokane,per-diem-spokane-wa,24.53,cna er
+Spray,per-diem-spray-or,24.53,cna er
+Springdale,per-diem-springdale-ar,25.49,cna er
+Springfield,per-diem-springfield-mo,25.68,cna er
+Springfield,per-diem-springfield-oh,25.96,cna er
+St. Albans,per-diem-st-albans-wv,25.61,cna er
+St. Charles,per-diem-st-charles-mo,25.43,cna er
+St. Cloud,per-diem-st-cloud-fl,25.78,cna er
+St. Joseph,per-diem-st-joseph-mo,25.36,cna er
+Stafford,per-diem-stafford-tx,23.77,cna er
+Stamford,per-diem-stamford-ct,24.53,cna er
+Sterling CO,per-diem-sterling-co,24.53,cna er
+Sterling IL,per-diem-sterling-il,23.77,cna er
+Stockton,per-diem-stockton-ca,23.77,cna er
+Suffolk,per-diem-suffolk-va,25.03,cna er
+Sulphur,per-diem-sulphur-ok,24.08,cna er
+Superior AZ,per-diem-superior-az,24.08,cna er
+Surprise,per-diem-surprise-az,23.77,cna er
+Syracuse NY,per-diem-syracuse-ny,24.08,cna er
+Tacoma,per-diem-tacoma-wa,24.53,cna er
+Tampa Bay FL,per-diem-tampa-bay-fl,24.53,cna er
+Tampa FL,per-diem-tampa-fl,23.77,cna er
+Teays Valley,per-diem-teays-valley-wv,25.38,cna er
+Tempe AZ,per-diem-tempe-az,24.53,cna er
+Tempe Kiwanis Park,per-diem-tempe-kiwanis-park-az,25.93,cna er
+The Acreage,per-diem-the-acreage-fl,26.18,cna er
+The Hammocks,per-diem-the-hammocks-fl,25.57,cna er
+The Woodlands,per-diem-the-woodlands-tx,23.77,cna er
+Toledo,per-diem-toledo-oh,25.64,cna er
+Toledo OR,per-diem-toledo-or,23.77,cna er
+Toledo Southwyck,per-diem-toledo-southwyck-oh,25.44,cna er
+Topeka,per-diem-topeka-ks,25.25,cna er
+Toppenish,per-diem-toppenish-wa,26.00,cna er
+Trenton,per-diem-trenton-fl,23.77,cna er
+Trexlertown,per-diem-trexlertown-pa,26.00,cna er
+Trotwood,per-diem-trotwood-oh,25.65,cna er
+Troy,per-diem-troy-pa,23.77,cna er
+Tualatin Sherwood - Tualatin South,per-diem-tualatin-sherwood-tualatin-south-or,25.45,cna er
+Tuba City,per-diem-tuba-city-az,24.08,cna er
+Tuckahoe,per-diem-tuckahoe-va,25.23,cna er
+Tucker,per-diem-tucker-ga,26.00,cna er
+Tucson,per-diem-tucson-az,22.23,cna er
+Tulsa,per-diem-tulsa-ok,24.08,cna er
+Tuscaloosa,per-diem-tuscaloosa-al,26.11,cna er
+Tuttle,per-diem-tuttle-ok,23.24,cna er
+Union,per-diem-union-or,23.55,cna er
+Union Gap,per-diem-union-gap-wa,25.30,cna er
+University CDP,per-diem-university-cdp-fl,25.65,cna er
+University City,per-diem-university-city-mo,25.74,cna er
+Utica,per-diem-utica-ny,24.08,cna er
+Vail CO,per-diem-vail-co,23.77,cna er
+Valdosta,per-diem-valdosta-ga,25.95,cna er
+Valparaiso,per-diem-valparaiso-fl,24.01,cna er
+Valyermo,per-diem-valyermo-ca,25.37,cna er
+Vancouver Pleasant Valley,per-diem-vancouver-pleasant-valley-wa,25.85,cna er
+Vancouver WA,per-diem-vancouver-wa,23.77,cna er
+Venice FL,per-diem-venice-fl,24.08,cna er
+Vernal,per-diem-vernal-ut,25.56,cna er
+Vian,per-diem-vian-ok,23.77,cna er
+Virginia Beach,per-diem-virginia-beach-va,25.57,cna er
+Wadsworth,per-diem-wadsworth-oh,25.23,cna er
+Wall Township,per-diem-wall-township-nj,25.53,cna er
+Warner Robins,per-diem-warner-robins-ga,25.95,cna er
+Washington Court House,per-diem-washington-court-house-nd,24.53,cna er
+Washington DC,per-diem-washington-dc,23.77,cna er
+Watauga,per-diem-watauga-tx,25.55,cna er
+Waterbury,per-diem-waterbury-ct,25.95,cna er
+Waterloo,per-diem-waterloo-ia,24.08,cna er
+Wauchula,per-diem-wauchula-fl,24.53,cna er
+Wauconda IL,per-diem-wauconda-il-89350,23.77,cna er
+Waukee,per-diem-waukee-ia,25.87,cna er
+Waukon,per-diem-waukon-ia,24.53,cna er
+Waverly IA,per-diem-waverly-ia,23.77,cna er
+Waverly OH,per-diem-waverly-oh,24.53,cna er
+Waxahachie,per-diem-waxahachie-tx,23.77,cna er
+Waycross,per-diem-waycross-ga,24.08,cna er
+Weatherly,per-diem-weatherly-pa,23.77,cna er
+Webster Groves,per-diem-webster-groves-mo,25.49,cna er
+Weirton,per-diem-weirton-wv,24.08,cna er
+Wellsboro,per-diem-wellsboro-pa,23.77,cna er
+Wellsville,per-diem-wellsville-mo,26.13,cna er
+Wellton,per-diem-wellton-az,24.53,cna er
+Wentzville,per-diem-wentzville-mo,25.00,cna er
+Weslaco,per-diem-weslaco-tx,23.77,cna er
+West,per-diem-west-tx,23.77,cna er
+West Bountiful,per-diem-west-bountiful-ut,24.53,cna er
+West Columbia TX,per-diem-west-columbia-tx-51605,24.53,cna er
+West Hills,per-diem-west-hills-ca,24.01,cna er
+West Jordan,per-diem-west-jordan-ut,23.77,cna er
+West Liberty,per-diem-west-liberty-ky,23.77,cna er
+West Linn OR,per-diem-west-linn-or,24.08,cna er
+West Valley City,per-diem-west-valley-city-ut,24.53,cna er
+Westchester,per-diem-westchester-fl,25.43,cna er
+Westerville,per-diem-westerville-oh,26.18,cna er
+Westhampton,per-diem-westhampton-ny,23.77,cna er
+Westmont,per-diem-westmont-il,24.53,cna er
+Weston,per-diem-weston-fl,25.55,cna er
+Wetumpka,per-diem-wetumpka-al,24.08,cna er
+Wharton,per-diem-wharton-tx,24.08,cna er
+Wheat Ridge CO,per-diem-wheat-ridge-co,24.53,cna er
+Wheaton,per-diem-wheaton-il,23.77,cna er
+Wheeler TX,per-diem-wheeler-tx,24.53,cna er
+Wheeling,per-diem-wheeling-wv,24.08,cna er
+White City,per-diem-white-city-or,24.08,cna er
+White Sulphur Springs,per-diem-white-sulphur-springs-mt,24.53,cna er
+Whitehall,per-diem-whitehall-oh,25.84,cna er
+Whitesboro,per-diem-whitesboro-tx,24.08,cna er
+Whitney,per-diem-whitney-tx,23.77,cna er
+Wichita,per-diem-wichita-ks,25.56,cna er
+Wichita Falls,per-diem-wichita-falls-tx,24.08,cna er
+Wickenburg,per-diem-wickenburg-az,24.08,cna er
+Wildwood,per-diem-wildwood-fl,23.77,cna er
+Wilkesboro,per-diem-wilkesboro-nc,23.77,cna er
+Willamina,per-diem-willamina-or,24.53,cna er
+Williamsport,per-diem-williamsport-md,23.77,cna er
+Willis,per-diem-willis-tx,24.53,cna er
+Williston FL,per-diem-williston-fl,23.77,cna er
+Wills Point,per-diem-wills-point-tx,24.08,cna er
+Wilmington DE,per-diem-wilmington-de,23.77,cna er
+Wilsonville,per-diem-wilsonville-or,24.08,cna er
+Wilton Manors,per-diem-wilton-manors-fl,24.53,cna er
+Wimauma,per-diem-wimauma-fl,24.53,cna er
+Windsor CO,per-diem-windsor-co,24.53,cna er
+Winnemucca,per-diem-winnemucca-nv,24.08,cna er
+Winnie,per-diem-winnie-tx,24.01,cna er
+Winslow,per-diem-winslow-az,24.53,cna er
+Winston,per-diem-winston-or,23.77,cna er
+Winston-Salem,per-diem-winston-salem-nc,25.66,cna er
+Winter Garden,per-diem-winter-garden-fl,24.08,cna er
+Winter Haven,per-diem-winter-haven-fl,24.08,cna er
+Winter Park CO,per-diem-winter-park-co,22.23,cna er
+Winter Park FL,per-diem-winter-park-fl,23.77,cna er
+Winthrop,per-diem-winthrop-me,24.08,cna er
+Wittmann,per-diem-wittmann-az,23.77,cna er
+Wolcottville,per-diem-wolcottville-in,23.24,cna er
+Wolf Point,per-diem-wolf-point-mt,24.08,cna er
+Wolfforth,per-diem-wolfforth-tx,23.77,cna er
+Woodbridge,per-diem-woodbridge-va,24.53,cna er
+Woodburn,per-diem-woodburn-or,23.77,cna er
+Woodbury,per-diem-woodbury-nj,23.77,cna er
+Woodcliff Lake,per-diem-woodcliff-lake-nj,23.55,cna er
+Woods Cross,per-diem-woods-cross-ut,23.77,cna er
+Wooster,per-diem-wooster-oh,25.14,cna er
+Wray,per-diem-wray-co,23.77,cna er
+Wylie,per-diem-wylie-tx,23.77,cna er
+Xenia,per-diem-xenia-oh,26.00,cna er
+Yakima WA,per-diem-yakima-wa,24.53,cna er
+Ybor City,per-diem-ybor-city-fl,24.01,cna er
+Yelm,per-diem-yelm-wa,25.68,cna er
+Yonkers,per-diem-yonkers-ny,26.31,cna er
+York PA,per-diem-york-pa,23.77,cna er
+Yorktown IN,per-diem-yorktown-in,24.08,cna er
+Yorktown TX,per-diem-yorktown-tx,24.08,cna er
+Youngstown,per-diem-youngstown-oh,25.53,cna er
+Youngtown,per-diem-youngtown-az,22.23,cna er
+Yuba City,per-diem-yuba-city-ca,23.77,cna er
+Yucca Valley,per-diem-yucca-valley-ca,25.06,cna er
+Yulee,per-diem-yulee-fl,24.08,cna er
+Yuma AZ,per-diem-yuma-az,25.56,cna er
+Yuma CO,per-diem-yuma-co,24.08,cna er
+Zachary,per-diem-zachary-la,24.01,cna er
+Zanesville,per-diem-zanesville-nd,23.77,cna er
+Zapata,per-diem-zapata-tx,23.24,cna er
+Zephyr Cove,per-diem-zephyr-cove-nv,23.24,cna er
+Zephyrhills,per-diem-zephyrhills-fl,23.24,cna er
+Zion,per-diem-zion-il,25.25,cna er

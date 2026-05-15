@@ -1,0 +1,534 @@
+name,slug,pay,license
+Addison,per-diem-addison-tx,50.98,rn icu
+Akron,per-diem-akron-oh,51.78,rn icu
+Albany,per-diem-albany-ny,53.82,rn icu
+Alhambra,per-diem-alhambra-ca,50.98,rn icu
+Allentown,per-diem-allentown-pa,50.73,rn icu
+Alpharetta,per-diem-alpharetta-ga,52.95,rn icu
+Altamonte Springs,per-diem-altamonte-springs-fl,50.98,rn icu
+Alvin,per-diem-alvin-tx,51.45,rn icu
+Amarillo,per-diem-amarillo-tx,51.45,rn icu
+Anchorage,per-diem-anchorage-ak,51.45,rn icu
+Apache Junction,per-diem-apache-junction-az,50.98,rn icu
+Apple Valley,per-diem-apple-valley-mn,49.98,rn icu
+Arizona City,per-diem-arizona-city-az,51.45,rn icu
+Arlington Heights,per-diem-arlington-heights-il,48.11,rn icu
+Arlington VA,per-diem-arlington-va,51.78,rn icu
+Ashland City,per-diem-ashland-city-tn,48.11,rn icu
+Athens,per-diem-athens-al,49.78,rn icu
+Atlanta GA,per-diem-atlanta-ga,52.82,rn icu
+Auburn,per-diem-auburn-me,51.95,rn icu
+Auburndale,per-diem-auburndale-fl,51.01,rn icu
+Augusta,per-diem-augusta-ga,52.89,rn icu
+Aurora,per-diem-aurora-co,54.98,rn icu
+Aurora,per-diem-aurora-il,54.98,rn icu
+Austin,per-diem-austin-tx,51.78,rn icu
+Austintown,per-diem-austintown-oh,53.78,rn icu
+Babylon town,per-diem-babylon-town-ny,53.33,rn icu
+Balch Springs,per-diem-balch-springs-tx,50.98,rn icu
+Baltimore MD,per-diem-baltimore-md,50.98,rn icu
+Bandera,per-diem-bandera-tx,50.98,rn icu
+Bangor,per-diem-bangor-me,51.45,rn icu
+Bartlett,per-diem-bartlett-tn,51.87,rn icu
+Basking Ridge,per-diem-basking-ridge-nj,51.45,rn icu
+Baton Rouge,per-diem-baton-rouge-la,51.45,rn icu
+Bay Harbor Islands,per-diem-bay-harbor-islands-fl,51.78,rn icu
+Bel Air South,per-diem-bel-air-south-md,52.98,rn icu
+Belfast,per-diem-belfast-me,51.11,rn icu
+Bella Vista,per-diem-bella-vista-ar,51.58,rn icu
+Bellevue WA,per-diem-bellevue-wa,50.98,rn icu
+Belton MO,per-diem-belton-mo,50.98,rn icu
+Bend,per-diem-bend-or,51.11,rn icu
+Bensalem,per-diem-bensalem-pa,51.31,rn icu
+Bentonville,per-diem-bentonville-ar,51.26,rn icu
+Bethesda,per-diem-bethesda-md-f4e6d,52.89,rn icu
+Big Bear,per-diem-big-bear-ca,51.01,rn icu
+Billings,per-diem-billings-mt,51.01,rn icu
+Biloxi,per-diem-biloxi-ms,50.73,rn icu
+Birmingham,per-diem-birmingham-al,51.45,rn icu
+Bixby,per-diem-bixby-ok,48.98,rn icu
+Black Hawk,per-diem-black-hawk-co,51.45,rn icu
+Bloomington,per-diem-bloomington-in,49.75,rn icu
+Bloomington,per-diem-bloomington-mn,49.43,rn icu
+Boise ID,per-diem-boise-id,50.98,rn icu
+Bonners Ferry,per-diem-bonners-ferry-id,50.98,rn icu
+Boston,per-diem-boston-ma,51.45,rn icu
+Bountiful,per-diem-bountiful-ut,51.11,rn icu
+Bowie,per-diem-bowie-md,52.92,rn icu
+Bowling Green,per-diem-bowling-green-ky,54.98,rn icu
+Bozeman MT,per-diem-bozeman-mt,51.45,rn icu
+Branford,per-diem-branford-ct,50.98,rn icu
+Bridgeport,per-diem-bridgeport-ct,53.57,rn icu
+Brighton,per-diem-brighton-co-2ed6f,50.98,rn icu
+Brighton CO,per-diem-brighton-co,54.98,rn icu
+Broken Arrow,per-diem-broken-arrow-ok,51.45,rn icu
+Brookhaven,per-diem-brookhaven-ga,52.78,rn icu
+Brooklyn Center,per-diem-brooklyn-center-mn,50.65,rn icu
+Brownwood,per-diem-brownwood-tx,51.78,rn icu
+Buda,per-diem-buda-tx,51.78,rn icu
+Buffalo,per-diem-buffalo-ny,53.43,rn icu
+Butte MT,per-diem-butte-mt,51.78,rn icu
+Calais,per-diem-calais-me,51.01,rn icu
+Calhan,per-diem-calhan-co,51.45,rn icu
+Cape Coral FL,per-diem-cape-coral-fl,51.78,rn icu
+Carmel,per-diem-carmel-in,51.45,rn icu
+Carrollton,per-diem-carrollton-tx,54.98,rn icu
+Catonsville,per-diem-catonsville-md,55.98,rn icu
+Cedar Park,per-diem-cedar-park-tx,50.98,rn icu
+Cedar Rapids,per-diem-cedar-rapids-ia,51.11,rn icu
+Cedar Rapids Oakhill Jackson,per-diem-cedar-rapids-oakhill-jackson-ia,50.98,rn icu
+Celina,per-diem-celina-tx,50.98,rn icu
+Centennial,per-diem-centennial-co,51.11,rn icu
+Cetreville,per-diem-cetreville-md,50.98,rn icu
+Chandler,per-diem-chandler-az,51.45,rn icu
+Chantilly,per-diem-chantily-va,51.78,rn icu
+Charleston,per-diem-charleston-sc,51.11,rn icu
+Charleston,per-diem-charleston-wv,48.33,rn icu
+Charlotte NC,per-diem-charlotte-nc,50.98,rn icu
+Chattanooga,per-diem-chattanooga-tn,51.78,rn icu
+Cheektowaga,per-diem-cheektowaga-ny,53.95,rn icu
+Chesapeake,per-diem-chesapeake-va,53.89,rn icu
+Chesterfield,per-diem-chesterfield-mo,49.69,rn icu
+Chicago Heights IL,per-diem-chicago-heights-il,50.98,rn icu
+Chicago IL,per-diem-chicago-il,56.43,rn icu
+Cincinnati,per-diem-cincinnati-nd,51.11,rn icu
+Clark,per-diem-clark-nj,52.67,rn icu
+Clarksville,per-diem-clarksville-tn,51.26,rn icu
+Clearwater,per-diem-clearwater-fl,51.11,rn icu
+Cleveland OH,per-diem-cleveland-oh,51.11,rn icu
+Clifton NJ,per-diem-clifton-nj,50.98,rn icu
+Clinton,per-diem-clinton-md-59a75,53.69,rn icu
+Clinton,per-diem-clinton-ms,50.92,rn icu
+Colorado Springs,per-diem-colorado-springs-co,50.98,rn icu
+Columbia,per-diem-columbia-sc,49.89,rn icu
+Columbia MO,per-diem-columbia-mo,50.98,rn icu
+Columbia TN,per-diem-columbia-tn,51.11,rn icu
+Columbus GA,per-diem-columbus-ga,52.65,rn icu
+Columbus OH,per-diem-columbus-oh,51.78,rn icu
+Conroe,per-diem-conroe-tx,51.45,rn icu
+Coppell,per-diem-coppell-tx,51.11,rn icu
+Corona,per-diem-corona-ca,52.78,rn icu
+Corydon,per-diem-corydon-ia,51.11,rn icu
+Coshocton,per-diem-coshocton-nd,50.98,rn icu
+Cottonwood Heights,per-diem-cottonwood-heights-ut,50.98,rn icu
+Covington,per-diem-covington-ky,50.33,rn icu
+Crestview,per-diem-crestview-fl,51.97,rn icu
+Crystal City,per-diem-crystal-city-tx,51.11,rn icu
+Cutler Bay,per-diem-cutler-bay-fl,50.98,rn icu
+Cypress,per-diem-cypress-tx,51.78,rn icu
+Dade City,per-diem-dade-city-fl,51.78,rn icu
+Dallas,per-diem-dallas-tx,51.78,rn icu
+Daly City,per-diem-daly-city-ca,51.45,rn icu
+Davenport IA,per-diem-davenport-ia,53.65,rn icu
+Daytona Beach FL,per-diem-daytona-beach-fl,51.11,rn icu
+Deer Park,per-diem-deer-park-tx,51.78,rn icu
+Deerfield Beach,per-diem-deerfield-beach-fl,50.98,rn icu
+Denver CO,per-diem-denver-co,81.97,rn icu
+Des Moines,per-diem-des-moines-ia,51.78,rn icu
+Detroit,per-diem-detroit-mi,51.45,rn icu
+Doral,per-diem-doral-fl,50.98,rn icu
+Dover,per-diem-dover-de,54.57,rn icu
+Downers Grove,per-diem-downers-grove-il,49.31,rn icu
+Draper,per-diem-draper-ut,54.98,rn icu
+Dublin,per-diem-dublin-oh,51.78,rn icu
+Dulles,per-diem-dulles-va,51.78,rn icu
+Duluth,per-diem-duluth-mn,49.58,rn icu
+Durham NC,per-diem-durham-nc,51.78,rn icu
+Eagle Pass,per-diem-eagle-pass-tx,51.78,rn icu
+Easton,per-diem-easton-md,51.78,rn icu
+Edcouch,per-diem-edcouch-tx,51.45,rn icu
+El Cajon,per-diem-el-cajon-ca,50.98,rn icu
+Elizabethtown,per-diem-elizabethtown-ky,50.69,rn icu
+Elmhurst IL,per-diem-elmhurst-il,54.98,rn icu
+Eloy,per-diem-eloy-az,51.45,rn icu
+Elyria,per-diem-elyria-nd,51.97,rn icu
+englewood,per-diem-englewood-nj,55.98,rn icu
+Enterprise,per-diem-enterprise-al,49.65,rn icu
+Erie,per-diem-erie-pa,51.57,rn icu
+Erlanger,per-diem-erlanger-ky,51.57,rn icu
+Escondido CA,per-diem-escondido-ca,50.98,rn icu
+Eugene,per-diem-eugene-or,51.11,rn icu
+Evansville,per-diem-evansville-in,49.57,rn icu
+Ewa Gentry,per-diem-ewa-gentry-hi,54.78,rn icu
+Fairfax VA,per-diem-fairfax-va,51.45,rn icu
+Fairfield,per-diem-fairfield-ct,53.87,rn icu
+Falls Church,per-diem-falls-church-va,51.78,rn icu
+Farmington ME,per-diem-farmington-me,51.11,rn icu
+Farragut,per-diem-farragut-tn,51.95,rn icu
+Fayetteville,per-diem-fayetteville-ar,50.89,rn icu
+Federal Way,per-diem-federal-way-wa,50.98,rn icu
+Fernandina Beach,per-diem-fernandina-beach-fl,50.98,rn icu
+Fernley,per-diem-fernley-nv,51.11,rn icu
+Florida City,per-diem-florida-city-fl,51.97,rn icu
+Fort Collins,per-diem-fort-collins-co,50.98,rn icu
+Fort Dodge,per-diem-fort-dodge-ia,51.45,rn icu
+Fort Lauderdale,per-diem-fort-lauderdale-fl,51.11,rn icu
+Fort Madison,per-diem-fort-madison-ia,50.98,rn icu
+Fort Pierce FL,per-diem-fort-pierce-fl,50.98,rn icu
+Fort Smith,per-diem-fort-smith-ar,51.78,rn icu
+Fort Wayne,per-diem-fort-wayne-in,51.45,rn icu
+Fort Worth,per-diem-fort-worth-tx,51.45,rn icu
+Four Corners,per-diem-four-corners-fl,54.65,rn icu
+Frankfort KY,per-diem-frankfort-ky,51.45,rn icu
+Frederick,per-diem-frederick-md-54c42,52.65,rn icu
+Frederick MD,per-diem-frederick-md,51.11,rn icu
+Fredericksburg VA,per-diem-fredericksburg-va,51.45,rn icu
+Fremont,per-diem-fremont-ca,50.98,rn icu
+Fresno CA,per-diem-fresno-ca,51.45,rn icu
+Frisco TX,per-diem-frisco-tx,51.01,rn icu
+Fruitland,per-diem-fruitland-id,50.98,rn icu
+Ft. Worth,per-diem-ft-worth-tx,51.97,rn icu
+Fulshear,per-diem-fulshear-tx,51.45,rn icu
+Gainesville FL,per-diem-gainesville-fl,51.11,rn icu
+Gaithersburg,per-diem-gaithersburg-md,52.78,rn icu
+Gilmer,per-diem-gilmer-tx,51.45,rn icu
+Glastonbury,per-diem-glastonbury-ct,53.92,rn icu
+Godley,per-diem-godley-tx,50.98,rn icu
+Golden Glades,per-diem-golden-glades-fl,54.92,rn icu
+Goodyear,per-diem-goodyear-az,50.98,rn icu
+Grand Forks,per-diem-grand-forks-nd,51.97,rn icu
+Grand Junction CO,per-diem-grand-junction-co,51.01,rn icu
+Grandview,per-diem-grandview-tx,51.45,rn icu
+Great Falls,per-diem-great-falls-mt,51.11,rn icu
+Greece,per-diem-greece-ny,53.89,rn icu
+Green,per-diem-green-oh,53.33,rn icu
+Greenacres,per-diem-greenacres-fl,50.98,rn icu
+Greenville,per-diem-greenville-ms,50.89,rn icu
+Greenville SC,per-diem-greenville-sc,51.01,rn icu
+Greenville TX,per-diem-greenville-tx,51.11,rn icu
+Greenwich,per-diem-greenwich-ct,53.75,rn icu
+Greer,per-diem-greer-sc,50.57,rn icu
+Gresham,per-diem-gresham-or,51.45,rn icu
+Griswold,per-diem-griswold-ia,50.98,rn icu
+Groves,per-diem-groves-tx,50.98,rn icu
+Gulfport,per-diem-gulfport-ms,50.69,rn icu
+Hamilton MT,per-diem-hamilton-mt,51.78,rn icu
+Harlingen,per-diem-harlingen-tx,51.01,rn icu
+Hartfield,per-diem-hartfield-va,55.98,rn icu
+Hartford,per-diem-hartford-ct,50.98,rn icu
+Harvey,per-diem-harvey-il,51.11,rn icu
+Harvey,per-diem-harvey-la,51.82,rn icu
+Hattiesburg,per-diem-hattiesburg-ms,50.98,rn icu
+Hayward CA,per-diem-hayward-ca,51.45,rn icu
+Hazard,per-diem-hazard-ky,50.98,rn icu
+Helena MT,per-diem-helena-mt,51.01,rn icu
+Hemet CA,per-diem-hemet-ca,55.98,rn icu
+Henderson NV,per-diem-henderson-nv,51.45,rn icu
+Hialeah Gardens,per-diem-hialeah-gardens-fl,51.01,rn icu
+Hillsboro OR,per-diem-hillsboro-or,51.45,rn icu
+Hilo,per-diem-hilo-hi,51.01,rn icu
+Hobe Sound,per-diem-hobe-sound-fl,50.98,rn icu
+Hoffman Estates,per-diem-hoffman-estates-il,48.98,rn icu
+Holland,per-diem-holland-oh,52.33,rn icu
+Honolulu,per-diem-honolulu-hi,51.01,rn icu
+Hopkinsville,per-diem-hopkinsville-ky,50.73,rn icu
+Horn Lake,per-diem-horn-lake-ms,51.31,rn icu
+Hot Springs,per-diem-hot-springs-ar,51.75,rn icu
+Houston,per-diem-houston-tx,51.78,rn icu
+Hudson OH,per-diem-hudson-oh,52.65,rn icu
+Huntington,per-diem-huntington-wv,48.11,rn icu
+Huntsville,per-diem-huntsville-al,51.11,rn icu
+Idaho Falls,per-diem-idaho-falls-id,51.45,rn icu
+Independence MO,per-diem-independence-mo,51.11,rn icu
+Indianapolis,per-diem-indianapolis-in,51.45,rn icu
+Issaquah,per-diem-issaquah-wa,50.98,rn icu
+Jackson,per-diem-jackson-ms,51.11,rn icu
+Jacksonville FL,per-diem-jacksonville-fl,51.45,rn icu
+Jeffersontown,per-diem-jeffersontown-ky,50.82,rn icu
+Jeffersonville,per-diem-jeffersonville-in,49.82,rn icu
+Jersey City,per-diem-jersey-city-nj,51.11,rn icu
+Jersey Village,per-diem-jersey-village-tx,51.45,rn icu
+Johnstown,per-diem-johnstown-co,51.11,rn icu
+Joliet,per-diem-joliet-il,48.31,rn icu
+Jonesboro,per-diem-jonesboro-ar,50.95,rn icu
+Jupiter,per-diem-jupiter-fl,51.45,rn icu
+Kahului,per-diem-kahului-hi,54.69,rn icu
+Kansas City KS,per-diem-kansas-city-ks,51.11,rn icu
+Kansas City MO,per-diem-kansas-city-mo,54.98,rn icu
+Kapolei,per-diem-kapolei-hi,54.73,rn icu
+Keizer,per-diem-keizer-or,51.01,rn icu
+Kelso WA,per-diem-kelso-wa,55.98,rn icu
+Kenansville,per-diem-kenansville-nc,51.11,rn icu
+Key Largo,per-diem-key-largo-fl,51.45,rn icu
+Kiowa,per-diem-kiowa-co,51.78,rn icu
+Kissimmee,per-diem-kissimmee-fl,51.45,rn icu
+Knoxville,per-diem-knoxville-tn,51.57,rn icu
+La Grange Park,per-diem-la-grange-park-il,51.45,rn icu
+Lafayette CO,per-diem-lafayette-co,55.98,rn icu
+Lafayette IA,per-diem-lafayette-la,51.78,rn icu
+Lake Charles,per-diem-lake-charles-la,51.87,rn icu
+Lake Ridge,per-diem-lake-ridge-va,54.65,rn icu
+Lakeville,per-diem-lakeville-mn,49.67,rn icu
+Lakewood,per-diem-lakewood-co,50.98,rn icu
+Lakewood Ranch,per-diem-lakewood-ranch-fl,51.78,rn icu
+Lancaster,per-diem-lancaster-ca,52.65,rn icu
+Lansdale,per-diem-lansdale-pa,54.92,rn icu
+Laredo,per-diem-laredo-tx,51.01,rn icu
+Las Vegas,per-diem-las-vegas-nv,55.98,rn icu
+Lawrenceville,per-diem-lawrenceville-ga,51.98,rn icu
+Lawton,per-diem-lawton-ok,51.78,rn icu
+Leadville,per-diem-leadville-co,51.11,rn icu
+Lewiston ME,per-diem-lewiston-me,51.11,rn icu
+Lighthouse Point,per-diem-lighthouse-point-fl,50.98,rn icu
+Little Rock,per-diem-little-rock-ar,50.82,rn icu
+Logan,per-diem-logan-ut,50.98,rn icu
+Longmont,per-diem-longmont-co,51.11,rn icu
+Longwood,per-diem-longwood-fl,50.98,rn icu
+Los Angeles CA,per-diem-los-angeles-ca,51.45,rn icu
+Los Lunas,per-diem-los-lunas-nm,53.57,rn icu
+Louisville KY,per-diem-louisville-ky,51.78,rn icu
+Loveland,per-diem-loveland-co,50.98,rn icu
+Loxahatchee,per-diem-loxahatchee-fl,50.98,rn icu
+Macclenny,per-diem-macclenny-fl,51.78,rn icu
+Macon,per-diem-macon-ga,51.92,rn icu
+Madison,per-diem-madison-al,49.26,rn icu
+Madison,per-diem-madison-ms,50.95,rn icu
+Madisonville,per-diem-madisonville-ky,51.26,rn icu
+Maitland,per-diem-maitland-fl,51.45,rn icu
+Maple Grove,per-diem-maple-grove-mn,49.69,rn icu
+Marysville,per-diem-marysville-wa,51.11,rn icu
+Maumee,per-diem-maumee-nd,51.45,rn icu
+Mayfield Heights,per-diem-mayfield-heights-oh,51.95,rn icu
+McKinney,per-diem-mc-kinney-tx,54.98,rn icu
+Medina,per-diem-medina-oh,53.87,rn icu
+Melbourne,per-diem-melbourne-fl,55.98,rn icu
+Memphis,per-diem-memphis-tn,51.31,rn icu
+Meridian,per-diem-meridian-id,50.98,rn icu
+Merrillville,per-diem-merrillville-in,50.98,rn icu
+Mesa,per-diem-mesa-az,51.11,rn icu
+Miami,per-diem-miami-fl,51.78,rn icu
+Miami Beach,per-diem-miami-beach-fl,51.78,rn icu
+Miami Springs,per-diem-miami-springs-fl,51.45,rn icu
+Middletown,per-diem-middletown-de,54.26,rn icu
+Midland,per-diem-midland-tx,51.97,rn icu
+Milford,per-diem-milford-ct,53.67,rn icu
+Milpitas CA,per-diem-milpitas-ca,51.11,rn icu
+Milwaukee,per-diem-milwaukee-wi,51.11,rn icu
+Minneapolis,per-diem-minneapolis-mn,49.66,rn icu
+Miramar Beach,per-diem-miramar-fl,51.45,rn icu
+Missoula,per-diem-missoula-mt,51.43,rn icu
+Missouri,per-diem-missouri-mo,51.78,rn icu
+Mobile,per-diem-mobile-al,51.97,rn icu
+Monroe LA,per-diem-monroe-la,51.45,rn icu
+Monterey,per-diem-monterey-ca,50.98,rn icu
+Montgomery,per-diem-montgomery-al,51.78,rn icu
+Moon,per-diem-moon-pa,49.58,rn icu
+Moreno Valley,per-diem-moreno-valley-ca,52.66,rn icu
+Morgantown,per-diem-morgantown-wv,48.65,rn icu
+Mount Pleasant,per-diem-mount-pleasant-sc,49.92,rn icu
+Mountain Home ID,per-diem-mountain-home-id,51.11,rn icu
+Mountain View AR,per-diem-mountain-view-ar,51.45,rn icu
+Muncie,per-diem-muncie-in,49.11,rn icu
+Muscatine,per-diem-muscatine-ia,53.66,rn icu
+Nacogdoches,per-diem-nacogdoches-tx,51.45,rn icu
+Nampa,per-diem-nampa-id,50.98,rn icu
+Napa,per-diem-napa-ca,51.78,rn icu
+Naperville,per-diem-naperville-il,48.57,rn icu
+Naples,per-diem-naples-fl,51.97,rn icu
+Nashville,per-diem-nashville-tn,50.98,rn icu
+Naugatuck,per-diem-naugatuck-ct,53.95,rn icu
+New Haven,per-diem-new-haven-ct,51.11,rn icu
+New Iberia,per-diem-new-iberia-la,51.69,rn icu
+New Orleans,per-diem-new-orleans-la,51.78,rn icu
+New Rochelle,per-diem-new-rochelle-ny,54.57,rn icu
+New york,per-diem-new-york-ny,51.01,rn icu
+New York City,per-diem-new-york-city-ny,51.45,rn icu
+Newark,per-diem-newark-nj,51.11,rn icu
+Newark DE,per-diem-newark-de,51.78,rn icu
+Newport News,per-diem-newport-news-va,53.95,rn icu
+Niceville,per-diem-niceville-fl,51.78,rn icu
+Nicholasville,per-diem-nicholasville-ky,50.78,rn icu
+Nisswa,per-diem-nisswa-mn,50.98,rn icu
+Norfolk,per-diem-norfolk-va,53.92,rn icu
+Norman OK,per-diem-norman-ok,51.01,rn icu
+Norristown,per-diem-norristown-pa,50.43,rn icu
+North Bend,per-diem-north-bend-wa,51.45,rn icu
+North Charleston,per-diem-north-charleston-sc,51.78,rn icu
+North Fort Myers,per-diem-north-fort-myers-fl,54.43,rn icu
+North Las Vegas,per-diem-north-las-vegas-nv,51.11,rn icu
+North Lauderdale,per-diem-north-lauderdale-fl,54.31,rn icu
+North Ridgeville,per-diem-north-ridgeville-oh,54.57,rn icu
+Oak Hill,per-diem-oak-hill-fl,51.45,rn icu
+Ocala FL,per-diem-ocala-fl,51.45,rn icu
+Oklahoma City,per-diem-oklahoma-city-ok,50.98,rn icu
+Oklahoma City Rock Knoll,per-diem-oklahoma-city-rock-knoll-ok,48.33,rn icu
+Olathe,per-diem-olathe-ks,50.92,rn icu
+Olive Branch,per-diem-olive-branch-ms,50.82,rn icu
+Olney,per-diem-olney-md,55.98,rn icu
+Omaha,per-diem-omaha-ne,51.45,rn icu
+Orange County CA,per-diem-orange-county-ca,51.11,rn icu
+Orem,per-diem-orem-ut,51.01,rn icu
+Orlando FL,per-diem-orlando-fl,51.11,rn icu
+Overland Park,per-diem-overland-park-ks,50.95,rn icu
+Owensboro,per-diem-owensboro-ky,50.58,rn icu
+Ozark,per-diem-ozark-mo,48.78,rn icu
+Palisade,per-diem-palisade-co,51.45,rn icu
+Palm Bay FL,per-diem-palm-bay-fl,51.45,rn icu
+Palm Beach Gardens,per-diem-palm-beach-gardens-fl,51.78,rn icu
+Palm Coast,per-diem-palm-coast-fl,51.01,rn icu
+Palo Alto,per-diem-palo-alto-ca,51.45,rn icu
+Paragould,per-diem-paragould-ar,51.33,rn icu
+Parkersburg,per-diem-parkersburg-wv,48.67,rn icu
+Parkland,per-diem-parkland-fl,51.11,rn icu
+Parma Heights,per-diem-parma-heights-oh,52.26,rn icu
+Parrish,per-diem-parrish-fl,50.98,rn icu
+Paterson,per-diem-paterson-nj,51.11,rn icu
+Pearl City,per-diem-pearl-city-hi,54.58,rn icu
+Pearsall,per-diem-pearsall-tx,51.11,rn icu
+Pella,per-diem-pella-ia,51.01,rn icu
+Pembroke Pines,per-diem-pembroke-pines-fl,51.78,rn icu
+Peyton,per-diem-peyton-co,51.45,rn icu
+Phenix City,per-diem-phenix-city-al-033c0,50.98,rn icu
+Philadelphia PA,per-diem-philadelphia-pa,51.78,rn icu
+Phoenix,per-diem-phoenix-az,51.45,rn icu
+Pickerington,per-diem-pickerington-oh,52.69,rn icu
+Pine Hills,per-diem-pine-hills-fl,54.87,rn icu
+Pittsburgh PA,per-diem-pittsburgh-pa,51.11,rn icu
+Plant City,per-diem-plant-city-fl,55.98,rn icu
+Pleasantville,per-diem-pleasantville-nj,51.11,rn icu
+Pocatello ID,per-diem-pocatello-id,50.98,rn icu
+Poinciana,per-diem-poinciana-fl,54.66,rn icu
+Porter,per-diem-porter-tx,51.01,rn icu
+Portland,per-diem-portland-or,50.98,rn icu
+Portland ME,per-diem-portland-me,51.78,rn icu
+Portsmouth,per-diem-portsmouth-va,54.57,rn icu
+Post Falls,per-diem-post-falls-id,50.98,rn icu
+Prattville,per-diem-prattville-al,49.87,rn icu
+Prescott,per-diem-prescott-az,50.98,rn icu
+Priest River,per-diem-priest-river-id,50.98,rn icu
+Princeton,per-diem-princeton-wv,51.45,rn icu
+Providence RI,per-diem-providence-ri,51.97,rn icu
+Provo,per-diem-provo-ut,51.11,rn icu
+Raleigh,per-diem-raleigh-nc,54.33,rn icu
+Rancho Cucamonga,per-diem-rancho-cucamonga-ca-e32ed,51.11,rn icu
+Raymore,per-diem-raymore-mo,48.73,rn icu
+Redding,per-diem-redding-ca,51.11,rn icu
+Reno,per-diem-reno-nv,51.97,rn icu
+Reston VA,per-diem-reston-va,51.11,rn icu
+Richfield,per-diem-richfield-mn,50.58,rn icu
+Richfield,per-diem-richfield-ut,55.98,rn icu
+Richland,per-diem-richland-wa,51.11,rn icu
+RICHMOND,per-diem-richmond,51.45,rn icu
+Richmond VA,per-diem-richmond-va,51.11,rn icu
+Ripley,per-diem-ripley-wv,50.98,rn icu
+Rochester,per-diem-rochester-mn,49.87,rn icu
+Rock Hill,per-diem-rock-hill-sc,49.95,rn icu
+Rockford,per-diem-rockford-il,55.98,rn icu
+Rockville,per-diem-rockville-md,52.73,rn icu
+Ross township,per-diem-ross-township-pa,50.26,rn icu
+Ruston,per-diem-ruston-la-6c77e,51.97,rn icu
+Sabinal,per-diem-sabinal-tx,51.11,rn icu
+Safety Harbor,per-diem-safety-harbor-fl,51.01,rn icu
+Saint Louis,per-diem-saint-louis-mo,50.98,rn icu
+Saint Petersburg,per-diem-saint-petersburg-fl,51.45,rn icu
+Salem,per-diem-salem-or,50.98,rn icu
+Salt Lake City,per-diem-salt-lake-city-ut,51.11,rn icu
+San Angelo,per-diem-san-angelo-tx,51.78,rn icu
+San Antonio,per-diem-san-antonio-tx,51.78,rn icu
+San Bernardino,per-diem-san-bernardino-ca,52.26,rn icu
+San Diego CA,per-diem-san-diego-ca,50.98,rn icu
+San Francisco,per-diem-san-francisco-ca,51.89,rn icu
+San Jose,per-diem-san-jose-ca,51.11,rn icu
+San Juan,per-diem-san-juan-tx,50.98,rn icu
+Santa Clarita,per-diem-santa-clarita-ca,52.57,rn icu
+Santa Cruz,per-diem-santa-cruz-ca,51.45,rn icu
+Santa Fe,per-diem-santa-fe-nm,51.45,rn icu
+Sarcoxie,per-diem-sarcoxie-mo,50.69,rn icu
+Savannah,per-diem-savannah-ga,51.11,rn icu
+Schaumburg IL,per-diem-schaumburg-il-85c6c,51.11,rn icu
+Scottsdale,per-diem-scottsdale-az,50.98,rn icu
+Seattle WA,per-diem-seattle-wa,51.45,rn icu
+Sedona,per-diem-sedona-az,51.11,rn icu
+Seneca,per-diem-seneca-sc,51.78,rn icu
+Severna Park,per-diem-severna-park-md,53.67,rn icu
+Shakopee,per-diem-shakopee-mn,50.75,rn icu
+Shelton WA,per-diem-shelton-wa,51.11,rn icu
+Shenandoah TX,per-diem-shenandoah-tx,50.98,rn icu
+Shoreline,per-diem-shoreline-wa,51.45,rn icu
+Sidney OH,per-diem-sidney-oh,51.98,rn icu
+Simpsonville,per-diem-simpsonville-sc,50.65,rn icu
+Sioux City,per-diem-sioux-city-ia,51.78,rn icu
+Sioux Falls,per-diem-sioux-falls-sd,51.11,rn icu
+Smyrna GA,per-diem-smyrna-ga,50.98,rn icu
+South Bend,per-diem-south-bend-in,49.26,rn icu
+South Pasadena,per-diem-south-pasadena-fl,51.01,rn icu
+South Portland,per-diem-south-portland-me,51.11,rn icu
+Southaven,per-diem-southaven-ms,50.78,rn icu
+Sparks,per-diem-sparks-nv,50.98,rn icu
+Spokane,per-diem-spokane-wa,50.98,rn icu
+Springdale,per-diem-springdale-ar,50.92,rn icu
+Springfield,per-diem-springfield-mo,49.78,rn icu
+Springfield,per-diem-springfield-va,51.45,rn icu
+St. Louis,per-diem-st-louis-mo-82ff1,50.98,rn icu
+St. Paul,per-diem-st-paul-mn,49.75,rn icu
+Stamford,per-diem-stamford-ct,50.98,rn icu
+Steamboat Springs,per-diem-steamboat-springs-co,50.98,rn icu
+Strongsville,per-diem-strongsville-oh,54.82,rn icu
+Stuart FL,per-diem-stuart-fl,51.11,rn icu
+Sugar Land,per-diem-sugar-land-tx,51.01,rn icu
+Sulphur Springs,per-diem-sulphur-springs-tx,55.98,rn icu
+Summerlin South,per-diem-summerlin-south-nv,52.26,rn icu
+Summersville,per-diem-summersville-wv,51.11,rn icu
+Sun City Center,per-diem-sun-city-center-fl,50.98,rn icu
+Sun Valley,per-diem-sun-valley-nv,50.98,rn icu
+Sunny Isles Beach,per-diem-sunny-isles-beach-fl,51.45,rn icu
+Syracuse NY,per-diem-syracuse-ny,50.98,rn icu
+Tacoma,per-diem-tacoma-wa,50.98,rn icu
+Tahoka,per-diem-tahoka-tx,51.78,rn icu
+Tampa FL,per-diem-tampa-fl,51.11,rn icu
+Tinley Park,per-diem-tinley-park-il,48.89,rn icu
+Toledo,per-diem-toledo-oh,48.11,rn icu
+Toledo Southwyck,per-diem-toledo-southwyck-oh,52.67,rn icu
+Tooele,per-diem-tooele-ut,50.98,rn icu
+Topeka,per-diem-topeka-ks,51.78,rn icu
+Trophy Club,per-diem-trophy-club-tx,51.01,rn icu
+Tucker,per-diem-tucker-ga,51.66,rn icu
+Tucson,per-diem-tucson-az,51.45,rn icu
+Tulsa,per-diem-tulsa-ok,51.97,rn icu
+Turlock,per-diem-turlock-ca,51.11,rn icu
+Tuscaloosa,per-diem-tuscaloosa-al,51.95,rn icu
+Tyler,per-diem-tyler-tx,51.11,rn icu
+Uniontown,per-diem-uniontown-pa,51.45,rn icu
+Vail CO,per-diem-vail-co,51.45,rn icu
+Vancouver WA,per-diem-vancouver-wa,51.78,rn icu
+Vero Beach FL,per-diem-vero-beach-fl,51.01,rn icu
+Victoria,per-diem-victoria-tx,55.98,rn icu
+Virginia Beach,per-diem-virginia-beach-va,53.82,rn icu
+Waco,per-diem-waco-tx,50.98,rn icu
+Waipahu,per-diem-waipahu-hi,54.11,rn icu
+Washington Court House,per-diem-washington-court-house-nd,55.98,rn icu
+Washington DC,per-diem-washington-dc,50.98,rn icu
+Waterbury,per-diem-waterbury-ct,53.26,rn icu
+Waterloo,per-diem-waterloo-ia,51.11,rn icu
+Waukon,per-diem-waukon-ia,51.45,rn icu
+Waycross,per-diem-waycross-ga,51.45,rn icu
+Webster Groves,per-diem-webster-groves-mo,48.92,rn icu
+Wellington FL,per-diem-wellington-fl,50.98,rn icu
+Weslaco,per-diem-weslaco-tx,51.78,rn icu
+Wesley Chapel,per-diem-wesley-chapel-fl,50.98,rn icu
+West Jordan,per-diem-west-jordan-ut,51.01,rn icu
+West Memphis,per-diem-west-memphis-ar,51.78,rn icu
+West Miami,per-diem-west-miami-fl,50.98,rn icu
+West Palm Beach,per-diem-west-palm-beach-fl,51.45,rn icu
+West Sacramento,per-diem-west-sacramento-ca,52.92,rn icu
+West Valley City,per-diem-west-valley-city-ut,55.98,rn icu
+Westfield,per-diem-westfield-in,49.92,rn icu
+Westlake,per-diem-westlake-oh,53.98,rn icu
+Wewahitchka,per-diem-wewahitchka-fl,51.78,rn icu
+Wheaton,per-diem-wheaton-il,51.45,rn icu
+Wheeling,per-diem-wheeling-wv,50.98,rn icu
+Wichita,per-diem-wichita-ks,51.45,rn icu
+Wilkes-Barre City,per-diem-wilkes-barre-city-pa,50.67,rn icu
+Wilkesboro,per-diem-wilkesboro-nc,51.78,rn icu
+Williamsport,per-diem-williamsport-md,51.11,rn icu
+Wilmington DE,per-diem-wilmington-de,51.78,rn icu
+Winchester,per-diem-winchester-nv,52.57,rn icu
+Winston-Salem,per-diem-winston-salem-nc,54.11,rn icu
+Winter Garden,per-diem-winter-garden-fl,51.45,rn icu
+Winter Springs,per-diem-winter-springs-fl,51.97,rn icu
+Woodbridge,per-diem-woodbridge-va,55.98,rn icu
+Woodstock,per-diem-woodstock-ga,51.31,rn icu
+Yonkers,per-diem-yonkers-ny,53.65,rn icu
+Yorktown IN,per-diem-yorktown-in,51.45,rn icu
+Zachary,per-diem-zachary-la,51.11,rn icu
+Zanesville,per-diem-zanesville-nd,50.98,rn icu

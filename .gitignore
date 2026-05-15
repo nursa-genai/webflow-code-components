@@ -14,6 +14,7 @@
 # misc
 .DS_Store
 /public/facilities-old.json
+/public/searchjobs-old.json
 .env
 .env.local
 .env.development.local

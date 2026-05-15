@@ -1,0 +1,460 @@
+name,slug,pay,license
+Affton,per-diem-affton-mo,25.61,cna icu
+Ajo,per-diem-ajo-az,23.77,cna icu
+Akron,per-diem-akron-oh,25.56,cna icu
+Alabaster,per-diem-alabaster-al,25.20,cna icu
+Albuquerque,per-diem-albuquerque-nm,24.53,cna icu
+Alexander City,per-diem-alexander-city-al,23.55,cna icu
+Alexandria VA,per-diem-alexandria-va,23.77,cna icu
+Alhambra,per-diem-alhambra-ca,24.53,cna icu
+Allentown,per-diem-allentown-pa,25.32,cna icu
+Alpine,per-diem-alpine-ut,23.77,cna icu
+Alvord,per-diem-alvord-tx,24.08,cna icu
+Amargosa Valley,per-diem-amargosa-valley-nv,23.77,cna icu
+American Fork,per-diem-american-fork-ut,24.08,cna icu
+Amherst,per-diem-amherst-8-va,23.77,cna icu
+Anacortes,per-diem-anacortes-wa,24.53,cna icu
+Anchorage,per-diem-anchorage-ak,23.55,cna icu
+Anderson,per-diem-anderson-in,25.00,cna icu
+Angleton,per-diem-angleton-tx,25.55,cna icu
+Annandale,per-diem-annandale-va,24.08,cna icu
+Annapolis MD,per-diem-annapolis-md,23.77,cna icu
+Apache Junction,per-diem-apache-junction-az,24.53,cna icu
+Apollo Beach,per-diem-apollo-beach-fl,24.08,cna icu
+Archer City,per-diem-archer-city-tx,24.08,cna icu
+Arivaca,per-diem-arivaca-az,23.77,cna icu
+Arizona City,per-diem-arizona-city-az,24.08,cna icu
+Arlington,per-diem-arlington-tx,24.08,cna icu
+Arlington VA,per-diem-arlington-va,25.56,cna icu
+Arnold,per-diem-arnold-mo,25.43,cna icu
+Atlanta,per-diem-atlanta-tx,24.08,cna icu
+Atlanta GA,per-diem-atlanta-ga,25.68,cna icu
+Auburn,per-diem-auburn-al,25.75,cna icu
+Auburn,per-diem-auburn-me,25.61,cna icu
+Auburn WA,per-diem-auburn-wa,24.08,cna icu
+Augusta,per-diem-augusta-ga,25.30,cna icu
+Augusta,per-diem-augusta-me,25.50,cna icu
+Aurora,per-diem-aurora-co,24.53,cna icu
+Aurora,per-diem-aurora-il,25.67,cna icu
+Austin,per-diem-austin-tx,24.08,cna icu
+Avon CT,per-diem-avon-ct,25.56,cna icu
+Avondale AZ,per-diem-avondale-az,24.01,cna icu
+Ballinger,per-diem-ballinger-tx,25.55,cna icu
+Baltimore MD,per-diem-baltimore-md,23.77,cna icu
+Bandon,per-diem-bandon-or,24.53,cna icu
+Bangor,per-diem-bangor-me,24.53,cna icu
+Bar Harbor,per-diem-bar-harbor-me,23.77,cna icu
+Barberton,per-diem-barberton-oh,25.95,cna icu
+Bardstown,per-diem-bardstown-ky,24.53,cna icu
+Batesville,per-diem-batesville-ar,23.77,cna icu
+Baton Rouge,per-diem-baton-rouge-la,24.08,cna icu
+Battle Ground,per-diem-battle-ground-wa,24.08,cna icu
+Beaumont,per-diem-beaumont-tx,23.77,cna icu
+Bel Air South,per-diem-bel-air-south-md,25.67,cna icu
+Belleville,per-diem-belleville-ks,24.53,cna icu
+Bellevue WA,per-diem-bellevue-wa,24.08,cna icu
+Bellville,per-diem-bellville-tx,24.08,cna icu
+Benton,per-diem-benton-ar,25.54,cna icu
+Bethlehem City,per-diem-bethlehem-city-pa,26.18,cna icu
+Billings,per-diem-billings-mt,24.01,cna icu
+Biloxi,per-diem-biloxi-ms,25.32,cna icu
+Birmingham,per-diem-birmingham-al,24.08,cna icu
+Bloomington,per-diem-bloomington-mn,26.10,cna icu
+Boise ID,per-diem-boise-id,24.53,cna icu
+Boston,per-diem-boston-ma,23.77,cna icu
+Bowie,per-diem-bowie-md,26.00,cna icu
+Bowling Green,per-diem-bowling-green-ky,24.53,cna icu
+Bozeman MT,per-diem-bozeman-mt,24.08,cna icu
+Bridgeport,per-diem-bridgeport-ct,25.95,cna icu
+Brighton CO,per-diem-brighton-co,24.53,cna icu
+Broken Arrow,per-diem-broken-arrow-ok,23.77,cna icu
+Brookhaven,per-diem-brookhaven-ga,25.48,cna icu
+Brunswick,per-diem-brunswick-mo,25.67,cna icu
+Buffalo,per-diem-buffalo-ny,25.45,cna icu
+Burien,per-diem-burien-wa,25.61,cna icu
+Burlington,per-diem-burlington-nc,25.93,cna icu
+Burlington IA,per-diem-burlington-ia,25.47,cna icu
+Butte MT,per-diem-butte-mt,24.53,cna icu
+Canton,per-diem-canton-oh,26.13,cna icu
+Canton GA,per-diem-canton-ga,25.35,cna icu
+Cape May,per-diem-cape-may-nj,25.87,cna icu
+Carmel,per-diem-carmel-in,23.77,cna icu
+Cedar Rapids,per-diem-cedar-rapids-ia,24.53,cna icu
+Centerville OH,per-diem-centerville-oh,25.61,cna icu
+Chandler,per-diem-chandler-az,23.77,cna icu
+Charleston,per-diem-charleston-sc,24.08,cna icu
+Charleston,per-diem-charleston-wv,25.68,cna icu
+Charlotte Elizabeth,per-diem-charlotte-elizabeth-nc,26.31,cna icu
+Charlotte Myers Park,per-diem-charlotte-myers-park-nc,25.74,cna icu
+Charlotte NC,per-diem-charlotte-nc,24.01,cna icu
+Charlottesville,per-diem-charlottesville-va,25.65,cna icu
+Chattanooga,per-diem-chattanooga-tn,24.08,cna icu
+Chesapeake,per-diem-chesapeake-va,26.18,cna icu
+Chester City,per-diem-chester-city-pa,25.93,cna icu
+Chicago Heights IL,per-diem-chicago-heights-il,24.53,cna icu
+Chicago IL,per-diem-chicago-il,23.77,cna icu
+Chicago Ridge,per-diem-chicago-ridge-il,24.85,cna icu
+Chipley,per-diem-chipley-fl,24.53,cna icu
+Chula Vista,per-diem-chula-vista-ca,25.10,cna icu
+Clarksville,per-diem-clarksville-tn,25.95,cna icu
+Cleveland Heights,per-diem-cleveland-heights-oh,25.22,cna icu
+Cleveland OH,per-diem-cleveland-oh,23.77,cna icu
+Clifton NJ,per-diem-clifton-nj,24.08,cna icu
+Clinton IA,per-diem-clinton-ia,25.41,cna icu
+Collierville,per-diem-collierville-tn,25.14,cna icu
+Colonie town,per-diem-colonie-town-ny,25.75,cna icu
+Colorado Springs,per-diem-colorado-springs-co,24.08,cna icu
+Columbia,per-diem-columbia-sc,25.83,cna icu
+Columbia MO,per-diem-columbia-mo,24.53,cna icu
+Columbia TN,per-diem-columbia-tn,25.55,cna icu
+Columbus GA,per-diem-columbus-ga,25.40,cna icu
+Columbus OH,per-diem-columbus-oh,24.08,cna icu
+Concord,per-diem-concord-nc,25.22,cna icu
+Cottonwood Heights,per-diem-cottonwood-heights-ut,23.77,cna icu
+Covington,per-diem-covington-ky,25.68,cna icu
+Cupertino,per-diem-cupertino-ca,23.77,cna icu
+Cuyahoga Falls,per-diem-cuyahoga-falls-oh,25.14,cna icu
+Dallas,per-diem-dallas-tx,24.08,cna icu
+Davenport IA,per-diem-davenport-ia,25.61,cna icu
+Denver CO,per-diem-denver-co,22.23,cna icu
+Des Moines,per-diem-des-moines-ia,25.56,cna icu
+Detroit,per-diem-detroit-mi,23.77,cna icu
+Dover,per-diem-dover-de,25.78,cna icu
+Dulles,per-diem-dulles-va,24.08,cna icu
+Duluth,per-diem-duluth-ga,25.85,cna icu
+Duluth,per-diem-duluth-mn,25.20,cna icu
+Duncan,per-diem-duncan-ok,25.47,cna icu
+Dundalk,per-diem-dundalk-md,25.68,cna icu
+Durham NC,per-diem-durham-nc,24.08,cna icu
+Eagle ID,per-diem-eagle-id,23.77,cna icu
+Eagle Mountain,per-diem-eagle-mountain-ut,25.50,cna icu
+East Point,per-diem-east-point-ga,26.10,cna icu
+El Cerrito,per-diem-el-cerrito-ca,25.95,cna icu
+El Paso West Central El Paso,per-diem-el-paso-west-central-el-paso-tx,25.83,cna icu
+Elsa,per-diem-elsa-tx,24.08,cna icu
+Erie,per-diem-erie-pa,25.85,cna icu
+Euclid,per-diem-euclid-oh,25.67,cna icu
+Eugene,per-diem-eugene-or,25.56,cna icu
+Evanston,per-diem-evanston-il,25.77,cna icu
+Evansville,per-diem-evansville-in,25.85,cna icu
+Fairfax VA,per-diem-fairfax-va,23.77,cna icu
+Fairfield,per-diem-fairfield-oh,25.48,cna icu
+Fayetteville,per-diem-fayetteville-ar,26.18,cna icu
+Fillmore,per-diem-fillmore-ut,23.77,cna icu
+Florissant,per-diem-florissant-mo,25.95,cna icu
+Fort Collins,per-diem-fort-collins-co,24.08,cna icu
+Fort Smith,per-diem-fort-smith-ar,24.08,cna icu
+Fort Wayne,per-diem-fort-wayne-in,23.77,cna icu
+Fort Worth,per-diem-fort-worth-tx,24.08,cna icu
+Fountain Hills,per-diem-fountain-hills-az,23.77,cna icu
+Four Corners,per-diem-four-corners-fl,25.92,cna icu
+Frederick,per-diem-frederick-md-63292,25.40,cna icu
+Frederick MD,per-diem-frederick-md,23.77,cna icu
+Freeport IL,per-diem-freeport-il,25.55,cna icu
+Fresno CA,per-diem-fresno-ca,24.53,cna icu
+Gadsden,per-diem-gadsden-al,26.10,cna icu
+Gaithersburg,per-diem-gaithersburg-md,25.48,cna icu
+Georgetown,per-diem-georgetown-de,25.74,cna icu
+Georgetown,per-diem-georgetown-ky,25.74,cna icu
+Germantown,per-diem-germantown-md,25.20,cna icu
+Gladstone,per-diem-gladstone-mo,25.85,cna icu
+Gladstone OR,per-diem-gladstone-or,24.08,cna icu
+Glendale AZ,per-diem-glendale-az,24.01,cna icu
+Globe,per-diem-globe-az,24.53,cna icu
+Golden Glades,per-diem-golden-glades-fl,25.84,cna icu
+Grand Junction CO,per-diem-grand-junction-co,24.01,cna icu
+Great Falls,per-diem-great-falls-mt,23.55,cna icu
+Gresham,per-diem-gresham-or,24.08,cna icu
+Grove City,per-diem-grove-city-oh,26.10,cna icu
+Gulfport,per-diem-gulfport-ms,25.43,cna icu
+Hackensack,per-diem-hackensack-nj,24.53,cna icu
+Hampton,per-diem-hampton-va,25.65,cna icu
+Hardin,per-diem-hardin-mt,24.01,cna icu
+Harlan,per-diem-harlan-ky,23.24,cna icu
+Hartford,per-diem-hartford-ct,23.77,cna icu
+Hattiesburg,per-diem-hattiesburg-ms,25.55,cna icu
+Haverford,per-diem-haverford-pa,25.57,cna icu
+Hawthorne,per-diem-hawthorne-ca,23.77,cna icu
+Hayward,per-diem-hayward-ca,23.77,cna icu
+Helena MT,per-diem-helena-mt,23.24,cna icu
+Henderson NV,per-diem-henderson-nv,23.55,cna icu
+Hilliard,per-diem-hilliard-oh,25.37,cna icu
+Hillsboro OR,per-diem-hillsboro-or,24.08,cna icu
+Hoffman Estates,per-diem-hoffman-estates-il,25.65,cna icu
+Hopewell,per-diem-hopewell-va,24.08,cna icu
+Horsham,per-diem-horsham-pa,25.43,cna icu
+Houston TX,per-diem-houston-tx,23.24,cna icu
+Huber Heights,per-diem-huber-heights-oh,25.57,cna icu
+Huntington,per-diem-huntington-wv,25.74,cna icu
+Huntsville,per-diem-huntsville-al,25.38,cna icu
+Hutchinson,per-diem-hutchinson-ks,26.10,cna icu
+Idaho Falls,per-diem-idaho-falls-id,24.53,cna icu
+Idalou,per-diem-idalou-tx,23.77,cna icu
+Independence MO,per-diem-independence-mo,23.77,cna icu
+Indianapolis,per-diem-indianapolis-in,24.08,cna icu
+Iva,per-diem-iva-sc,25.65,cna icu
+Jackson,per-diem-jackson-ms,24.08,cna icu
+Jacksonville FL,per-diem-jacksonville-fl,23.77,cna icu
+Jeffersonville,per-diem-jeffersonville-in,25.95,cna icu
+Jersey City,per-diem-jersey-city-nj,23.77,cna icu
+Johnson City TN,per-diem-johnson-city-tn,24.08,cna icu
+Joliet,per-diem-joliet-il,25.93,cna icu
+Jonesboro,per-diem-jonesboro-ar,25.32,cna icu
+Joplin,per-diem-joplin-mo,25.14,cna icu
+Kansas City KS,per-diem-kansas-city-ks,24.01,cna icu
+Kansas City MO,per-diem-kansas-city-mo,23.77,cna icu
+Kearns,per-diem-kearns-ut,24.08,cna icu
+Kellogg,per-diem-kellogg-id,24.08,cna icu
+Kendall,per-diem-kendall-fl,25.68,cna icu
+Kennewick,per-diem-kennewick-wa,25.43,cna icu
+Kent,per-diem-kent-oh,25.54,cna icu
+Kent,per-diem-kent-wa,25.95,cna icu
+Knoxville,per-diem-knoxville-tn,25.95,cna icu
+La Pryor,per-diem-la-pryor-tx,24.53,cna icu
+Lafayette,per-diem-lafayette-la,24.08,cna icu
+Lafayette CO,per-diem-lafayette-co,24.53,cna icu
+Lake Charles,per-diem-lake-charles-la,25.99,cna icu
+Lake Ridge,per-diem-lake-ridge-va,25.92,cna icu
+Lakeville,per-diem-lakeville-mn,25.57,cna icu
+Lakewood,per-diem-lakewood-co,24.53,cna icu
+Lakewood,per-diem-lakewood-oh,25.47,cna icu
+Las Vegas,per-diem-las-vegas-nv,23.77,cna icu
+Lawrence,per-diem-lawrence-in,25.83,cna icu
+Lawton,per-diem-lawton-ok,25.55,cna icu
+Lebanon,per-diem-lebanon-oh,25.61,cna icu
+Lehi,per-diem-lehi-ut,24.53,cna icu
+Lewiston ME,per-diem-lewiston-me,25.56,cna icu
+Lewisville,per-diem-lewisville-tx,24.01,cna icu
+Liberty,per-diem-liberty-mo,25.61,cna icu
+Lima,per-diem-lima-oh,25.43,cna icu
+Little Rock,per-diem-little-rock-ar,25.57,cna icu
+Llano,per-diem-llano-tx,23.77,cna icu
+Los Angeles,per-diem-los-angeles-ca,23.77,cna icu
+Louisville KY,per-diem-louisville-ky,24.53,cna icu
+Lynchburg,per-diem-lynchburg-va,25.95,cna icu
+Lyons,per-diem-lyons-il,25.54,cna icu
+Macon,per-diem-macon-ga,25.25,cna icu
+Madisonville,per-diem-madisonville-ky,25.95,cna icu
+Manchester Township Whiting,per-diem-manchester-township-whiting-nj,25.41,cna icu
+Maple Grove,per-diem-maple-grove-mn,25.35,cna icu
+Maple Heights,per-diem-maple-heights-oh,25.44,cna icu
+Marion IA,per-diem-marion-ia,25.64,cna icu
+Massillon,per-diem-massillon-oh,25.61,cna icu
+McCormick,per-diem-mccormick-sc,25.23,cna icu
+Mechanicsville,per-diem-mechanicsville-va,25.14,cna icu
+Medina,per-diem-medina-oh,25.99,cna icu
+Memphis,per-diem-memphis-tn,25.59,cna icu
+Merced,per-diem-merced-ca,23.77,cna icu
+Meriden,per-diem-meriden-ct,26.11,cna icu
+Meridian,per-diem-meridian-id,24.53,cna icu
+Mesa,per-diem-mesa-az,23.77,cna icu
+Mesquite,per-diem-mesquite-9-nv,24.08,cna icu
+Miami,per-diem-miami-fl,24.53,cna icu
+Miamisburg,per-diem-miamisburg-oh,25.54,cna icu
+Middle Township Cape May Court House,per-diem-middle-township-cape-may-court-house-nj,25.74,cna icu
+Middletown,per-diem-middletown-de,25.50,cna icu
+Middletown,per-diem-middletown-oh,25.93,cna icu
+Milton,per-diem-milton-ga,25.61,cna icu
+Milwaukee,per-diem-milwaukee-wi,23.55,cna icu
+Minneapolis,per-diem-minneapolis-mn,25.43,cna icu
+Mishawaka,per-diem-mishawaka-in,25.68,cna icu
+Missoula,per-diem-missoula-mt,25.74,cna icu
+Mobile,per-diem-mobile-al,25.61,cna icu
+Montgomery,per-diem-montgomery-al,25.25,cna icu
+Moore,per-diem-moore-ok,25.64,cna icu
+Moreno Valley,per-diem-moreno-valley-ca,25.61,cna icu
+Morgantown,per-diem-morgantown-wv,25.47,cna icu
+Morristown,per-diem-morristown-tn,25.25,cna icu
+Mount Pleasant,per-diem-mount-pleasant-sc,25.84,cna icu
+Mount Prospect,per-diem-mount-prospect-il,25.57,cna icu
+Mount Vernon,per-diem-mount-vernon-ny,25.50,cna icu
+Muncie,per-diem-muncie-in,25.65,cna icu
+Muscatine,per-diem-muscatine-ia,25.96,cna icu
+Myakka City,per-diem-myakka-city-fl,23.77,cna icu
+Nampa,per-diem-nampa-id,23.77,cna icu
+Naperville,per-diem-naperville-il,25.38,cna icu
+Nashville,per-diem-nashville-tn,25.56,cna icu
+Nashville Madison,per-diem-nashville-madison-tn,26.00,cna icu
+Nashville South Nashville,per-diem-nashville-south-nashville-tn,25.67,cna icu
+Nevada City,per-diem-nevada-city-nv,23.77,cna icu
+New Haven,per-diem-new-haven-ct,24.08,cna icu
+New Orleans,per-diem-new-orleans-la,24.08,cna icu
+New Orleans Mid-City,per-diem-new-orleans-mid-city-la,25.03,cna icu
+New Providence,per-diem-new-providence-nj,25.61,cna icu
+New york,per-diem-new-york-ny,24.01,cna icu
+New York City,per-diem-new-york-city-ny,24.08,cna icu
+Newark,per-diem-newark-nj,23.77,cna icu
+Newark DE,per-diem-newark-de,23.77,cna icu
+Newnan,per-diem-newnan-ga,25.03,cna icu
+Newport News,per-diem-newport-news-va,25.32,cna icu
+Norfolk,per-diem-norfolk-va,25.49,cna icu
+Norman OK,per-diem-norman-ok,24.08,cna icu
+Norristown,per-diem-norristown-pa,25.87,cna icu
+North Charleston,per-diem-north-charleston-sc,24.08,cna icu
+North Fort Myers,per-diem-north-fort-myers-fl,25.74,cna icu
+North Las Vegas,per-diem-north-las-vegas-nv,24.08,cna icu
+North Liberty,per-diem-north-liberty-ia,25.93,cna icu
+North Ridgeville,per-diem-north-ridgeville-oh,25.78,cna icu
+Oakville,per-diem-oakville-mo,25.95,cna icu
+Oceanside,per-diem-oceanside-ca,25.68,cna icu
+Odenton,per-diem-odenton-md,25.41,cna icu
+Ogden,per-diem-ogden-ut,23.55,cna icu
+Oklahoma City,per-diem-oklahoma-city-ok,25.56,cna icu
+Oklahoma City Preston Hills,per-diem-oklahoma-city-preston-hills-ok,26.25,cna icu
+Olathe,per-diem-olathe-ks,25.74,cna icu
+Olympia WA,per-diem-olympia-wa,24.53,cna icu
+Omaha,per-diem-omaha-ne,23.77,cna icu
+Oradell,per-diem-oradell-nj,25.55,cna icu
+Oregon OH,per-diem-oregon-oh,25.95,cna icu
+Orem,per-diem-orem-ut,24.08,cna icu
+Orem Orem Park,per-diem-orem-orem-park-ut,25.10,cna icu
+Orlando FL,per-diem-orlando-fl,24.08,cna icu
+Overland Park,per-diem-overland-park-ks,25.03,cna icu
+Owensboro,per-diem-owensboro-ky,25.85,cna icu
+Oyster Bay,per-diem-oyster-bay-ny,25.99,cna icu
+Palmdale,per-diem-palmdale-ca,25.44,cna icu
+Palmhurst,per-diem-palmhurst-tx,24.08,cna icu
+Paradise,per-diem-paradise-nv,25.36,cna icu
+Parkersburg,per-diem-parkersburg-wv,25.44,cna icu
+Pascagoula,per-diem-pascagoula-ms,25.54,cna icu
+Paterson,per-diem-paterson-nj,24.08,cna icu
+Pearl,per-diem-pearl-ms,25.65,cna icu
+Peoria IL,per-diem-peoria-il,23.77,cna icu
+Philadelphia PA,per-diem-philadelphia-pa,23.77,cna icu
+Phoenix,per-diem-phoenix-az,24.08,cna icu
+Phoenix Deer Valley,per-diem-phoenix-deer-valley-az,25.92,cna icu
+Pickerington,per-diem-pickerington-oh,25.54,cna icu
+Pine Bluff,per-diem-pine-bluff-ar,25.95,cna icu
+Pine Hills,per-diem-pine-hills-fl,25.54,cna icu
+Pittsburgh PA,per-diem-pittsburgh-pa,25.56,cna icu
+Plano,per-diem-plano-tx,24.08,cna icu
+Pleasant Grove,per-diem-pleasant-grove-ut,23.77,cna icu
+Pocatello ID,per-diem-pocatello-id,23.77,cna icu
+Portland,per-diem-portland-or,24.53,cna icu
+Portland Hazelwood,per-diem-portland-hazelwood-or,25.03,cna icu
+Portland ME,per-diem-portland-me,23.24,cna icu
+Portsmouth,per-diem-portsmouth-va,25.85,cna icu
+Providence RI,per-diem-providence-ri,22.23,cna icu
+Provo,per-diem-provo-ut,23.77,cna icu
+Raleigh,per-diem-raleigh-nc,25.85,cna icu
+Raytown,per-diem-raytown-mo,25.54,cna icu
+Reno,per-diem-reno-nv,22.23,cna icu
+Richfield,per-diem-richfield-mn,26.13,cna icu
+Richlandtown,per-diem-richlandtown-pa,24.84,cna icu
+Richmond VA,per-diem-richmond-va,24.53,cna icu
+Roanoke,per-diem-roanoke-va,25.99,cna icu
+Rochester,per-diem-rochester-mn,25.37,cna icu
+Rock Hill,per-diem-rock-hill-sc,25.43,cna icu
+Rockford,per-diem-rockford-il,23.77,cna icu
+Rockville,per-diem-rockville-md,25.22,cna icu
+Rockwell,per-diem-rockwell-ia,25.61,cna icu
+Rome GA,per-diem-rome-ga,25.54,cna icu
+Roseburg OR,per-diem-roseburg-or,23.77,cna icu
+Roseville,per-diem-roseville-mn,25.77,cna icu
+Roswell,per-diem-roswell-ga,25.92,cna icu
+Saint Louis,per-diem-saint-louis-mo,23.77,cna icu
+Saint Petersburg,per-diem-saint-petersburg-fl,24.53,cna icu
+Salem,per-diem-salem-or,24.53,cna icu
+Salem West Salem,per-diem-salem-west-salem-or,25.49,cna icu
+Salina KS,per-diem-salina-ks,24.08,cna icu
+Salt Lake City,per-diem-salt-lake-city-ut,25.55,cna icu
+San Antonio,per-diem-san-antonio-tx,24.08,cna icu
+San Diego,per-diem-san-diego-ca,23.77,cna icu
+San Francisco,per-diem-san-francisco-ca,25.83,cna icu
+San Jose,per-diem-san-jose-ca,24.08,cna icu
+Sandy Springs,per-diem-sandy-springs-ga,25.14,cna icu
+Sandy UT,per-diem-sandy-ut,24.08,cna icu
+Santa Fe,per-diem-santa-fe-nm,23.77,cna icu
+Savannah,per-diem-savannah-ga,23.77,cna icu
+Scottsdale,per-diem-scottsdale-az,24.53,cna icu
+Seattle WA,per-diem-seattle-wa,24.53,cna icu
+Sebring,per-diem-sebring-fl,23.77,cna icu
+Sedalia,per-diem-sedalia-mo,25.57,cna icu
+Shaker Heights,per-diem-shaker-heights-oh,26.31,cna icu
+Shakopee,per-diem-shakopee-mn,25.53,cna icu
+Shawnee,per-diem-shawnee-ok,25.32,cna icu
+Sioux City,per-diem-sioux-city-ia,24.01,cna icu
+Slater-Marietta Marietta,per-diem-slater-marietta-marietta-sc,25.61,cna icu
+Snow Hill,per-diem-snow-hill-md,25.76,cna icu
+Solon,per-diem-solon-oh,26.10,cna icu
+South Bend,per-diem-south-bend-in,25.03,cna icu
+South Portland,per-diem-south-portland-me,23.77,cna icu
+Southaven,per-diem-southaven-ms,25.64,cna icu
+Southbury,per-diem-southbury-ct,26.10,cna icu
+Sparks,per-diem-sparks-nv,23.77,cna icu
+Spokane,per-diem-spokane-wa,24.53,cna icu
+Spokane Valley,per-diem-spokane-valley-wa,25.55,cna icu
+Springdale,per-diem-springdale-ar,25.49,cna icu
+Springettsbury,per-diem-springettsbury-pa,25.66,cna icu
+Springfield,per-diem-springfield-mo,25.68,cna icu
+Springville,per-diem-springville-ut,23.77,cna icu
+St. Charles,per-diem-st-charles-mo,25.43,cna icu
+St. Joseph,per-diem-st-joseph-mo,25.36,cna icu
+St. Paul,per-diem-st-paul-mn,26.18,cna icu
+St. Petersburg Historic Uptown,per-diem-st-petersburg-historic-uptown-fl,22.37,cna icu
+Stamford,per-diem-stamford-ct,24.08,cna icu
+Stonecrest,per-diem-stonecrest-ga,25.14,cna icu
+Stow,per-diem-stow-oh,25.74,cna icu
+Summerlin South,per-diem-summerlin-south-nv,25.23,cna icu
+Summit,per-diem-summit-nj,25.78,cna icu
+Sunrise Manor,per-diem-sunrise-manor-nv,25.43,cna icu
+Syracuse NY,per-diem-syracuse-ny,24.08,cna icu
+Tacoma,per-diem-tacoma-wa,24.53,cna icu
+Tampa FL,per-diem-tampa-fl,24.53,cna icu
+Taylors,per-diem-taylors-sc,25.54,cna icu
+Taylorsville,per-diem-taylorsville-ut,23.77,cna icu
+Terrytown,per-diem-terrytown-la,25.03,cna icu
+The Acreage,per-diem-the-acreage-fl,26.18,cna icu
+Tinley Park,per-diem-tinley-park-il,26.18,cna icu
+Toledo,per-diem-toledo-oh,25.64,cna icu
+Tolleson,per-diem-tolleson-az,24.53,cna icu
+Topeka,per-diem-topeka-ks,25.25,cna icu
+Trotwood,per-diem-trotwood-oh,25.65,cna icu
+Troy,per-diem-troy-pa,24.08,cna icu
+Trumbull,per-diem-trumbull-ct,25.38,cna icu
+Tucker,per-diem-tucker-ga,26.00,cna icu
+Tucson,per-diem-tucson-az,24.08,cna icu
+Tulsa,per-diem-tulsa-ok,22.23,cna icu
+Tuscaloosa,per-diem-tuscaloosa-al,26.11,cna icu
+Union Gap,per-diem-union-gap-wa,25.30,cna icu
+Uniontown,per-diem-uniontown-pa,23.77,cna icu
+University CDP,per-diem-university-cdp-fl,25.65,cna icu
+University City,per-diem-university-city-mo,25.74,cna icu
+Valdosta,per-diem-valdosta-ga,25.95,cna icu
+Valparaiso,per-diem-valparaiso-in,25.61,cna icu
+Vancouver WA,per-diem-vancouver-wa,24.08,cna icu
+Virginia Beach,per-diem-virginia-beach-va,25.57,cna icu
+Wadsworth,per-diem-wadsworth-oh,25.23,cna icu
+Wake Forest,per-diem-wake-forest-nc,25.53,cna icu
+Wall Township,per-diem-wall-township-nj,25.53,cna icu
+Warren,per-diem-warren-oh,25.85,cna icu
+Waterbury,per-diem-waterbury-ct,25.95,cna icu
+Waterloo,per-diem-waterloo-ia,24.53,cna icu
+Webster Groves,per-diem-webster-groves-mo,25.49,cna icu
+Wentzville,per-diem-wentzville-mo,25.00,cna icu
+West Jordan,per-diem-west-jordan-ut,24.08,cna icu
+West Lafayette,per-diem-west-lafayette-in,25.43,cna icu
+West Little River,per-diem-west-little-river-fl,25.64,cna icu
+West Valley City,per-diem-west-valley-city-ut,23.77,cna icu
+Westerville,per-diem-westerville-oh,26.18,cna icu
+Westlake,per-diem-westlake-oh,26.11,cna icu
+Wheat Ridge CO,per-diem-wheat-ridge-co,24.08,cna icu
+Wheeler TX,per-diem-wheeler-tx,23.77,cna icu
+Wheeling,per-diem-wheeling-wv,23.77,cna icu
+White Plains,per-diem-white-plains-ny,25.21,cna icu
+Whitehall,per-diem-whitehall-oh,25.84,cna icu
+Wichita,per-diem-wichita-ks,23.77,cna icu
+Williamsport,per-diem-williamsport-pa,25.40,cna icu
+Willoughby,per-diem-willoughby-oh,25.92,cna icu
+Wilmington DE,per-diem-wilmington-de,25.55,cna icu
+Windham,per-diem-windham-me,25.43,cna icu
+Windsor CO,per-diem-windsor-co,23.77,cna icu
+Winston-Salem,per-diem-winston-salem-nc,25.66,cna icu
+Woodstock,per-diem-woodstock-ga,25.59,cna icu
+Wooster,per-diem-wooster-oh,25.14,cna icu
+Yelm,per-diem-yelm-wa,25.68,cna icu
+Yonkers,per-diem-yonkers-ny,26.31,cna icu
+Youngstown,per-diem-youngstown-oh,25.53,cna icu
+Yuma AZ,per-diem-yuma-az,23.77,cna icu
+Zachary,per-diem-zachary-la,25.56,cna icu
+Zion,per-diem-zion-il,25.25,cna icu
