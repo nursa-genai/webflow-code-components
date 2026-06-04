@@ -34,6 +34,14 @@ export default declareComponent(ShiftBlocks, {
       name: 'City',
       defaultValue: '',
     }),
+    fromDate: props.Text({
+      name: 'From Date',
+      defaultValue: '',
+    }),
+    toDate: props.Text({
+      name: 'To Date',
+      defaultValue: '',
+    }),
     columns: props.Variant({
       name: 'Columns',
       defaultValue: '3',

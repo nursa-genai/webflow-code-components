@@ -1,10 +1,10 @@
 import './App.css';
-import SearchJobs from './components/SearchJobs';
+import ShiftBlocks from './components/ShiftBlocks';
 
 function App() {
   return (
     <div className="App">
-      <SearchJobs defaultZip='84044'/>
+      <ShiftBlocks cardLayout='facility'/>
     </div>
   );
 }

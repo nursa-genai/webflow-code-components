@@ -134,7 +134,28 @@ const LOAD_MORE_LABEL = {
   stateCities: 'Load more cities',
 };
 
-function buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city }) {
+// Accepts epoch milliseconds (e.g. "1782252000000"), a YYYY-MM-DD string, or any
+// Date-parseable string. Returns epoch ms, or null if empty/invalid.
+function parseDateMs(value) {
+  if (value == null || value === '') return null;
+  const str = String(value).trim();
+  if (!str) return null;
+  if (/^\d+$/.test(str)) return Number(str); // already epoch ms
+  const ms = Date.parse(str);
+  return Number.isNaN(ms) ? null : ms;
+}
+
+function buildApiUrl({
+  page,
+  limit,
+  shiftLicense,
+  specialty,
+  facilityId,
+  state,
+  city,
+  fromDate,
+  toDate,
+}) {
   const params = new URLSearchParams();
   params.set('page', String(page ?? 0));
   params.set('limit', String(limit ?? 20));
@@ -146,8 +167,13 @@ function buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, 
   if (specialty) params.append('specialties[]', specialty);
   if (facilityId) params.append('facilityIds[]', facilityId);
 
-  const fromDate = Date.now() + 2 * 60 * 60 * 1000;
-  params.set('fromDate', String(fromDate));
+  // Default lower bound: 2h from now (hides shifts already starting). A provided
+  // fromDate prop overrides it so callers can target a specific window.
+  const fromMs = parseDateMs(fromDate) ?? Date.now() + 2 * 60 * 60 * 1000;
+  params.set('fromDate', String(fromMs));
+
+  const toMs = parseDateMs(toDate);
+  if (toMs != null) params.set('toDate', String(toMs));
 
   return `${API_BASE}${SHIFT_BLOCKS_PATH}?${params.toString()}`;
 }
@@ -390,7 +416,7 @@ function ShiftCard({ block, layout }) {
 
 export default function ShiftBlocks({
   page = 0,
-  limit = 20,
+  limit = 100,
   shiftLicense = '',
   specialty = '',
   facilityId = '',
@@ -399,6 +425,8 @@ export default function ShiftBlocks({
   columns = '3',
   cardLayout = 'default',
   loadMoreLabel = '',
+  fromDate = '',
+  toDate = '',
 }) {
   const [blocks, setBlocks] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -407,8 +435,8 @@ export default function ShiftBlocks({
   const [total, setTotal] = useState(null);
 
   const filterKey = useMemo(
-    () => JSON.stringify({ shiftLicense, specialty, facilityId, state, city, limit, page }),
-    [shiftLicense, specialty, facilityId, state, city, limit, page]
+    () => JSON.stringify({ shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate }),
+    [shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate]
   );
 
   useEffect(() => {
@@ -419,7 +447,7 @@ export default function ShiftBlocks({
     setStatus('loading');
 
     let cancelled = false;
-    const url = buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city });
+    const url = buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city, fromDate, toDate });
 
     fetch(url)
       .then((r) => {
@@ -464,6 +492,8 @@ export default function ShiftBlocks({
       facilityId,
       state,
       city,
+      fromDate,
+      toDate,
     });
 
     fetch(url)
