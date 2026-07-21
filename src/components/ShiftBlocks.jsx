@@ -145,6 +145,12 @@ function parseDateMs(value) {
   return Number.isNaN(ms) ? null : ms;
 }
 
+// Treats Webflow Variant strings ('on'/'off'), booleans, and empty values
+// uniformly: only an explicit "on" (or boolean true) turns a filter on.
+function isOn(value) {
+  return value === true || value === 'on' || value === 'true';
+}
+
 function buildApiUrl({
   page,
   limit,
@@ -155,6 +161,8 @@ function buildApiUrl({
   city,
   fromDate,
   toDate,
+  weekendsOnly,
+  nightShifts,
 }) {
   const params = new URLSearchParams();
   params.set('page', String(page ?? 0));
@@ -166,6 +174,11 @@ function buildApiUrl({
   if (shiftLicense) params.append('shiftLicenses[]', shiftLicense);
   if (specialty) params.append('specialties[]', specialty);
   if (facilityId) params.append('facilityIds[]', facilityId);
+
+  // Weekend = Sat(6) + Sun(7), ISO day numbering. Omitted entirely when off.
+  if (isOn(weekendsOnly)) params.set('weekDays', '6,7');
+  // Night shifts: NOC is the canonical night-family label. Omitted when off.
+  if (isOn(nightShifts)) params.set('timePeriods', 'NOC');
 
   // Default lower bound: 2h from now (hides shifts already starting). A provided
   // fromDate prop overrides it so callers can target a specific window.
@@ -427,6 +440,8 @@ export default function ShiftBlocks({
   loadMoreLabel = '',
   fromDate = '',
   toDate = '',
+  weekendsOnly = '',
+  nightShifts = '',
 }) {
   const [blocks, setBlocks] = useState([]);
   const [status, setStatus] = useState('loading');
@@ -435,8 +450,8 @@ export default function ShiftBlocks({
   const [total, setTotal] = useState(null);
 
   const filterKey = useMemo(
-    () => JSON.stringify({ shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate }),
-    [shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate]
+    () => JSON.stringify({ shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate, weekendsOnly, nightShifts }),
+    [shiftLicense, specialty, facilityId, state, city, limit, page, fromDate, toDate, weekendsOnly, nightShifts]
   );
 
   useEffect(() => {
@@ -447,7 +462,7 @@ export default function ShiftBlocks({
     setStatus('loading');
 
     let cancelled = false;
-    const url = buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city, fromDate, toDate });
+    const url = buildApiUrl({ page, limit, shiftLicense, specialty, facilityId, state, city, fromDate, toDate, weekendsOnly, nightShifts });
 
     fetch(url)
       .then((r) => {
@@ -494,6 +509,8 @@ export default function ShiftBlocks({
       city,
       fromDate,
       toDate,
+      weekendsOnly,
+      nightShifts,
     });
 
     fetch(url)

@@ -42,6 +42,16 @@ export default declareComponent(ShiftBlocks, {
       name: 'To Date',
       defaultValue: '',
     }),
+    weekendsOnly: props.Variant({
+      name: 'Weekends Only',
+      defaultValue: 'off',
+      options: ['off', 'on'],
+    }),
+    nightShifts: props.Variant({
+      name: 'Night Shifts',
+      defaultValue: 'off',
+      options: ['off', 'on'],
+    }),
     columns: props.Variant({
       name: 'Columns',
       defaultValue: '3',
