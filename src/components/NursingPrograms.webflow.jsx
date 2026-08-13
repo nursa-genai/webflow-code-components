@@ -33,5 +33,28 @@ export default declareComponent(NursingPrograms, {
         'Small priming file loaded first so the UI paints before the full file arrives. The full file replaces it (and gives accurate dropdown counts) as soon as it loads.',
       group: 'Data Sources',
     }),
+    showImages: props.Boolean({
+      name: 'Show Card Images',
+      defaultValue: true,
+      tooltip:
+        'Renders the university photo from the CMS on each card. Turn off to ship a text-only list and skip the image data fetch entirely.',
+      group: 'Images',
+    }),
+    imageMode: props.Variant({
+      name: 'Image Sizing Mode',
+      options: ['proxy', 'webflow', 'direct'],
+      defaultValue: 'proxy',
+      tooltip:
+        'How the full-size CMS image is shrunk for the card. "proxy" resizes via wsrv.nl (free, NO SLA — fine for staging, swap for a paid resizer before relying on it in production). "webflow" appends Webflow\'s own -p-500 variant suffix — no third party, but only works once those variants exist for the asset. "direct" serves the original ~420 KB file and will make this page very heavy.',
+      group: 'Images',
+    }),
+    imagesUrl: props.Text({
+      name: 'Image Data URL',
+      defaultValue:
+        'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/nursing-programs.images.min.json',
+      tooltip:
+        'Slug-to-image-URL map, kept out of the main dataset because the URL hashes do not compress. Loaded after first paint; if it fails, cards simply render without photos.',
+      group: 'Images',
+    }),
   },
 });

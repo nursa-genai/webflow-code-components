@@ -368,6 +368,30 @@
   cursor: default;
 }
 
+/* Fixed-ratio tile so the card height is stable whether or not the image file
+   has arrived yet — no layout shift when thumbnails stream in. The tinted
+   background doubles as the placeholder for missing/failed images. */
+.np-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 4px;
+  overflow: hidden;
+  border-radius: calc(var(--np-radius) - 8px);
+  background: var(--np-primary-softer);
+}
+
+.np-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.np-card__media.is-failed .np-card__img {
+  display: none;
+}
+
 .np-card__name {
   margin: 0;
   color: var(--np-primary);

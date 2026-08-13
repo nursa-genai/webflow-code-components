@@ -18,14 +18,20 @@ const KNOWN_DEGREES = new Set([
   'federally-funded-traineeship-residency',
 ]);
 
-function parseCsvLine(line) {
-  const result = [];
+// Record-aware CSV reader: a quoted field may contain commas AND newlines, so
+// rows cannot be found by splitting on "\n" first. Raw Webflow CMS exports carry
+// rich-text HTML columns where that matters.
+function parseCsvRecords(text) {
+  // Tolerate Windows line endings + UTF-8 BOM from Google Sheets exports.
+  const cleaned = text.replace(/^﻿/, '').replace(/\r\n?/g, '\n');
+  const rows = [];
+  let row = [];
   let current = '';
   let inQuotes = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
+  for (let i = 0; i < cleaned.length; i++) {
+    const ch = cleaned[i];
     if (inQuotes) {
-      if (ch === '"' && line[i + 1] === '"') {
+      if (ch === '"' && cleaned[i + 1] === '"') {
         current += '"';
         i++;
       } else if (ch === '"') {
@@ -33,33 +39,41 @@ function parseCsvLine(line) {
       } else {
         current += ch;
       }
+    } else if (ch === '"') {
+      inQuotes = true;
+    } else if (ch === ',') {
+      row.push(current.trim());
+      current = '';
+    } else if (ch === '\n') {
+      row.push(current.trim());
+      rows.push(row);
+      row = [];
+      current = '';
     } else {
-      if (ch === '"') {
-        inQuotes = true;
-      } else if (ch === ',') {
-        result.push(current.trim());
-        current = '';
-      } else {
-        current += ch;
-      }
+      current += ch;
     }
   }
-  result.push(current.trim());
-  return result;
+  if (current !== '' || row.length) {
+    row.push(current.trim());
+    rows.push(row);
+  }
+  // Drop rows that are entirely empty (trailing newline, blank separator lines).
+  return rows.filter((r) => r.some((c) => c));
 }
 
 function parseCsv(text) {
-  // Tolerate Windows line endings + UTF-8 BOM from Google Sheets exports.
-  const cleaned = text.replace(/^﻿/, '').replace(/\r\n?/g, '\n');
-  const lines = cleaned.split('\n').filter((l) => l.trim());
-  if (lines.length < 2) return { items: [], skipped: 0, unknownDegrees: [], reason: 'fewer than 2 rows' };
+  const rows = parseCsvRecords(text);
+  if (rows.length < 2) return { items: [], skipped: 0, unknownDegrees: [], reason: 'fewer than 2 rows' };
 
-  const headers = parseCsvLine(lines[0]).map((h) => h.toLowerCase());
+  const headers = rows[0].map((h) => h.toLowerCase());
   const nameIdx = headers.indexOf('university name');
   const cityIdx = headers.indexOf('city');
   const stateIdx = headers.indexOf('state');
   const degreesIdx = headers.indexOf('nursing degrees');
   const slugIdx = headers.indexOf('slug');
+  // Optional — a CSV trimmed before these columns existed still builds fine.
+  const imageIdx = headers.indexOf('image');
+  const imageAltIdx = headers.indexOf('image alt tag');
   if (nameIdx === -1 || cityIdx === -1 || stateIdx === -1 || degreesIdx === -1 || slugIdx === -1) {
     return {
       items: [],
@@ -72,8 +86,8 @@ function parseCsv(text) {
   const items = [];
   const unknownDegrees = new Set();
   let skipped = 0;
-  for (let i = 1; i < lines.length; i++) {
-    const cols = parseCsvLine(lines[i]);
+  for (let i = 1; i < rows.length; i++) {
+    const cols = rows[i];
     const name = cols[nameIdx] && cols[nameIdx].trim();
     const slug = cols[slugIdx] && cols[slugIdx].trim().toLowerCase();
     const city = ((cols[cityIdx] && cols[cityIdx].trim()) || '').toLowerCase();
@@ -82,6 +96,10 @@ function parseCsv(text) {
       .split(';')
       .map((d) => d.trim().toLowerCase())
       .filter(Boolean);
+    // Only http(s) URLs are usable as a card thumbnail; anything else is noise.
+    const rawImage = imageIdx === -1 ? '' : (cols[imageIdx] || '').trim();
+    const image = /^https?:\/\//i.test(rawImage) ? rawImage : '';
+    const imageAlt = imageAltIdx === -1 ? '' : (cols[imageAltIdx] || '').trim();
 
     // A program is only useful if we can name it and link it.
     if (!name || !slug) {
@@ -91,7 +109,7 @@ function parseCsv(text) {
     for (const d of degrees) {
       if (!KNOWN_DEGREES.has(d)) unknownDegrees.add(d);
     }
-    items.push({ name, slug, city, state, degrees });
+    items.push({ name, slug, city, state, degrees, image, imageAlt });
   }
   return { items, skipped, unknownDegrees: [...unknownDegrees], reason: null };
 }
@@ -143,14 +161,25 @@ function main() {
       duplicates++;
       const merged = new Set([...existing.degrees, ...item.degrees]);
       existing.degrees = [...merged];
+      // Don't let a later imageless duplicate erase an image we already have.
+      if (!existing.image && item.image) {
+        existing.image = item.image;
+        existing.imageAlt = item.imageAlt;
+      }
     }
   }
   const deduped = [...bySlug.values()];
 
+  const withImage = deduped.filter((p) => p.image).length;
+  const withAlt = deduped.filter((p) => p.image && p.imageAlt).length;
   console.log(
     `Total: ${deduped.length} programs` +
       `${totalSkipped ? ` (${totalSkipped} rows skipped)` : ''}` +
       `${duplicates ? ` (${duplicates} duplicate slugs merged)` : ''}`,
+  );
+  console.log(
+    `Images: ${withImage}/${deduped.length} have one` +
+      `${withImage ? `, ${withAlt} with an alt tag (rest fall back to the university name)` : ''}`,
   );
   if (allUnknownDegrees.size) {
     console.log(`Note: ${allUnknownDegrees.size} unrecognized degree slug(s): ${[...allUnknownDegrees].join(', ')}`);

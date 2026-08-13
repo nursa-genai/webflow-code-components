@@ -7,6 +7,30 @@ const PROGRAMS_FULL_URL =
   'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/nursing-programs.min.json';
 const PROGRAMS_FIRST_URL =
   'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/nursing-programs.first.min.json';
+const PROGRAMS_IMAGES_URL =
+  'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/nursing-programs.images.min.json';
+
+// The source images are full-size Webflow CMS assets — ~420 KB each, with no
+// responsive variants generated. Rendering them raw would cost several MB for a
+// single screen of cards, so every URL goes through a resizing transform first.
+//
+//   proxy   — third-party resizer. Only "wsrv" is wired up; it is a free service
+//             with no SLA, so treat it as a prototype/staging default and switch
+//             to a paid resizer (Cloudinary/imgix/Bunny) before relying on it.
+//   webflow — append Webflow's own "-p-500" responsive variant suffix. Zero
+//             third-party dependency, but 403s unless the variants actually
+//             exist for the asset (bulk-imported assets do not have them).
+//   direct  — original URL, unresized. Correct only for already-small images.
+function buildThumbUrl(url, mode, width) {
+  if (!url) return '';
+  if (mode === 'direct') return url;
+  if (mode === 'webflow') {
+    const dot = url.lastIndexOf('.');
+    if (dot === -1) return url;
+    return `${url.slice(0, dot)}-p-${width}${url.slice(dot)}`;
+  }
+  return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=${width}&fit=cover&output=webp&q=80`;
+}
 
 // Curated display names for the known degree slugs. Anything not listed falls
 // back to slugToTitle() so new degree types still render sensibly.
@@ -170,8 +194,13 @@ export default function NursingPrograms({
   linkBase = '/nursing-programs/',
   dataUrl = PROGRAMS_FULL_URL,
   dataFirstUrl = PROGRAMS_FIRST_URL,
+  showImages = true,
+  imageMode = 'proxy',
+  imagesUrl = PROGRAMS_IMAGES_URL,
 }) {
   const [programs, setPrograms] = useState([]);
+  const [imagesBySlug, setImagesBySlug] = useState(null);
+  const [imagesFailed, setImagesFailed] = useState(false);
   const [visible, setVisible] = useState(() => readInitialParams().visible);
   const [status, setStatus] = useState('loading');
 
@@ -253,6 +282,43 @@ export default function NursingPrograms({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dataUrl, dataFirstUrl]);
+
+  // Images live in their own file so the card text paints without waiting on
+  // ~270 KB of URL hashes. A failure here is silent by design: the list is
+  // fully usable without thumbnails.
+  useEffect(() => {
+    if (!showImages || !imagesUrl) {
+      setImagesBySlug(null);
+      return undefined;
+    }
+    let cancelled = false;
+    setImagesFailed(false);
+    fetch(imagesUrl)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(({ k, r }) => {
+        if (cancelled) return;
+        const slugIdx = k.indexOf('slug');
+        const imageIdx = k.indexOf('image');
+        const altIdx = k.indexOf('imageAlt');
+        const map = new Map();
+        for (const row of r) {
+          if (!row[slugIdx] || !row[imageIdx]) continue;
+          map.set(row[slugIdx], { url: row[imageIdx], alt: altIdx === -1 ? '' : row[altIdx] || '' });
+        }
+        setImagesBySlug(map);
+      })
+      // Collapse the placeholder tiles rather than leaving every card with an
+      // empty box the images will never fill.
+      .catch(() => {
+        if (!cancelled) setImagesFailed(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [showImages, imagesUrl]);
 
   const filtersKey = useMemo(
     () =>
@@ -502,8 +568,38 @@ export default function NursingPrograms({
                 // City already carries the state abbreviation (e.g. "Akron, OH"),
                 // so prefer it; fall back to the full state name when city is blank.
                 const location = formatCity(p.city) || stateLabel(p.state);
+                const media = imagesBySlug && imagesBySlug.get(p.slug);
                 const inner = (
                   <>
+                    {showImages && !imagesFailed && (
+                      <div className="np-card__media">
+                        {media && (
+                          <img
+                            className="np-card__img"
+                            src={buildThumbUrl(media.url, imageMode, 500)}
+                            srcSet={
+                              imageMode === 'proxy'
+                                ? `${buildThumbUrl(media.url, imageMode, 500)} 500w, ${buildThumbUrl(
+                                    media.url,
+                                    imageMode,
+                                    800,
+                                  )} 800w`
+                                : undefined
+                            }
+                            sizes="(max-width: 640px) 100vw, 320px"
+                            alt={media.alt || p.name}
+                            loading="lazy"
+                            decoding="async"
+                            // Degrade to the plain placeholder tile rather than a
+                            // broken-image icon if the resizer is unreachable.
+                            onError={(e) => {
+                              const wrap = e.currentTarget.parentElement;
+                              if (wrap) wrap.classList.add('is-failed');
+                            }}
+                          />
+                        )}
+                      </div>
+                    )}
                     <h4 className="np-card__name">{p.name}</h4>
                     {location && <p className="np-card__location">{location}</p>}
                     {p.degrees.length > 0 && (
