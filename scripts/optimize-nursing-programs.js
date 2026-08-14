@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const FIRST_COUNT = 20;
+const FIRST_COUNT = 18;
 const PUBLIC = path.join(__dirname, '..', 'public');
 const INPUT = path.join(PUBLIC, 'nursing-programs.json');
 const OUT_FULL = path.join(PUBLIC, 'nursing-programs.min.json');
