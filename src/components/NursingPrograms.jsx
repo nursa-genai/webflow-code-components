@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './NursingPrograms.css';
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 18;
 
 const PROGRAMS_FULL_URL =
   'https://cdn.jsdelivr.net/gh/nursa-genai/webflow-code-components@master/public/nursing-programs.min.json';
